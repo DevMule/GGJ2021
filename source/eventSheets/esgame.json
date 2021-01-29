@@ -1,0 +1,77 @@
+{
+	"name": "ESGame",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "PLAYER_ID",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 306950255881736
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 666034174037028
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layout-scale",
+					"objectClass": "System",
+					"sid": 722878662795377,
+					"parameters": {
+						"scale": "4"
+					}
+				}
+			],
+			"sid": 345000710341929
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "GAME EVENTS",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "initGame",
+					"functionDescription": "",
+					"functionCategory": "game",
+					"functionReturnType": "none",
+					"functionIsAsync": true,
+					"functionParameters": [
+						{
+							"name": "new_player_id",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 695529660225290
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 741504152044077,
+							"parameters": {
+								"variable": "PLAYER_ID",
+								"value": "new_player_id"
+							}
+						}
+					],
+					"sid": 399278180835844
+				}
+			],
+			"sid": 346060190745918
+		}
+	],
+	"sid": 313727134619767
+}

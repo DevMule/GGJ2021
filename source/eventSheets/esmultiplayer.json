@@ -1,0 +1,77 @@
+{
+	"name": "ESMultiplayer",
+	"events": [
+		{
+			"functionName": "RunMultiplayer",
+			"functionDescription": "",
+			"functionCategory": "Multiplayer",
+			"functionReturnType": "none",
+			"functionIsAsync": true,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "connect",
+					"objectClass": "Multiplayer",
+					"sid": 872040890421148,
+					"parameters": {
+						"server": "JSONSetiings.Get(\"multiplayer.signallingServer\")"
+					}
+				}
+			],
+			"sid": 729312564503474
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-connected",
+					"objectClass": "Multiplayer",
+					"sid": 921777366254858
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "TError",
+					"sid": 339114004438384,
+					"parameters": {
+						"text": "1"
+					}
+				},
+				{
+					"id": "log-in",
+					"objectClass": "Multiplayer",
+					"sid": 532656166452199,
+					"parameters": {
+						"alias": "\"\""
+					}
+				}
+			],
+			"sid": 241434501577451
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-error",
+					"objectClass": "Multiplayer",
+					"sid": 645789253453642
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "TError",
+					"sid": 662454230655228,
+					"parameters": {
+						"text": "0"
+					}
+				}
+			],
+			"sid": 306192170019575
+		}
+	],
+	"sid": 615563815578794
+}

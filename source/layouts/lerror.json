@@ -1,0 +1,83 @@
+{
+	"name": "LError",
+	"layers": [
+		{
+			"name": "interface",
+			"overriden": 0,
+			"instances": [
+				{
+					"type": "TError",
+					"properties": {
+						"text": "Text",
+						"enable-bbcode": true,
+						"font": "VT323-Regular",
+						"size": 40,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 8,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 86.60303207817964,
+						"y": 96.1520786198625,
+						"width": 1747.1125666613511,
+						"height": 915.3331043956957,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 151792912605461,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.23921568627450981,
+				0.23921568627450981,
+				0.23921568627450981,
+				1
+			],
+			"isTransparent": false,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 0,
+			"forceOwnTexture": false,
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"global": false
+		}
+	],
+	"sid": 127218545461573,
+	"nonworld-instances": [],
+	"effectTypes": [],
+	"width": 1920,
+	"height": 1080,
+	"unboundedScrolling": false,
+	"eventSheet": "ESMaster"
+}

@@ -1,0 +1,156 @@
+{
+	"name": "ESMaster",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ESGame"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "ESMultiplayer"
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "GLOBAL FUNCTIONS",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "onError",
+					"functionDescription": "",
+					"functionCategory": "global",
+					"functionReturnType": "none",
+					"functionIsAsync": true,
+					"functionParameters": [
+						{
+							"name": "error",
+							"type": "string",
+							"initialValue": "\"unknown error\"",
+							"comment": "",
+							"sid": 278694410347448
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 270681960242142,
+							"parameters": {
+								"layout": "LError"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TError",
+							"sid": 972944319055072,
+							"parameters": {
+								"text": "error"
+							}
+						}
+					],
+					"sid": 924519186208584
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked",
+							"objectClass": "BtnCreateGame",
+							"sid": 833754562287299
+						}
+					],
+					"actions": [],
+					"sid": 243865036596024
+				}
+			],
+			"sid": 402708457169428
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "LAUNCH",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-load-complete",
+							"objectClass": "System",
+							"sid": 317826445766827
+						}
+					],
+					"actions": [
+						{
+							"id": "request-url",
+							"objectClass": "AJAX",
+							"sid": 535936277645394,
+							"parameters": {
+								"tag": "\"settings\"",
+								"url": "\"settings.json\""
+							}
+						}
+					],
+					"sid": 624057549859326
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-completed",
+							"objectClass": "AJAX",
+							"sid": 588663653361627,
+							"parameters": {
+								"tag": "\"settings\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "parse",
+							"objectClass": "JSONSetiings",
+							"sid": 406192252509200,
+							"parameters": {
+								"data": "AJAX.LastData"
+							}
+						},
+						{
+							"callFunction": "RunMultiplayer",
+							"sid": 533765417337943
+						}
+					],
+					"sid": 878762237190251
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-error",
+							"objectClass": "AJAX",
+							"sid": 498563359511144,
+							"parameters": {
+								"tag": "\"settings\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "onError",
+							"sid": 975852754954563,
+							"parameters": [
+								"\"cannot load settings\""
+							]
+						}
+					],
+					"sid": 204869333301847
+				}
+			],
+			"sid": 264214730897277
+		}
+	],
+	"sid": 647832622917969
+}
