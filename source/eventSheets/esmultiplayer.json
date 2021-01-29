@@ -145,9 +145,9 @@
 						{
 							"id": "go-to-layout",
 							"objectClass": "System",
-							"sid": 721515613082836,
+							"sid": 833412432818312,
 							"parameters": {
-								"layout": "LLobby"
+								"layout": "LGame"
 							}
 						}
 					],

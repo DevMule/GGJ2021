@@ -3,7 +3,26 @@
 	"plugin-id": "Sprite",
 	"sid": 390224940937464,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "pid",
+			"type": "string",
+			"desc": "",
+			"sid": 532170715244522
+		},
+		{
+			"name": "state",
+			"type": "string",
+			"desc": "json data",
+			"sid": 623786991461156
+		},
+		{
+			"name": "inputs",
+			"type": "number",
+			"desc": "",
+			"sid": 175150184747596
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "EightDir",

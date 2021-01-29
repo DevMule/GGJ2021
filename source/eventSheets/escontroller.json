@@ -1,0 +1,250 @@
+{
+	"name": "ESController",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "LOCAL_INPUTS",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 426671789974246
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "controller keyboard",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 901821176446257,
+							"parameters": {
+								"key": 37
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 972322961613997,
+							"parameters": {
+								"key": 65
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 957790013770786,
+							"parameters": {
+								"variable": "LOCAL_INPUTS",
+								"value": "setbit(LOCAL_INPUTS, 0, 1)"
+							}
+						}
+					],
+					"sid": 347419575629799,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 809617585485758
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 935131766976803,
+							"parameters": {
+								"variable": "LOCAL_INPUTS",
+								"value": "setbit(LOCAL_INPUTS, 0, 0)"
+							}
+						}
+					],
+					"sid": 839538287570132
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 888795953021407,
+							"parameters": {
+								"key": 39
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 865860354168062,
+							"parameters": {
+								"key": 68
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 777861860946506,
+							"parameters": {
+								"variable": "LOCAL_INPUTS",
+								"value": "setbit(LOCAL_INPUTS, 1, 1)"
+							}
+						}
+					],
+					"sid": 858885609931675,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 242880204666490
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 959879051457146,
+							"parameters": {
+								"variable": "LOCAL_INPUTS",
+								"value": "setbit(LOCAL_INPUTS, 1, 0)"
+							}
+						}
+					],
+					"sid": 562848660828732
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 349413872654790,
+							"parameters": {
+								"key": 38
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 116696458254777,
+							"parameters": {
+								"key": 87
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 104417564923936,
+							"parameters": {
+								"variable": "LOCAL_INPUTS",
+								"value": "setbit(LOCAL_INPUTS, 2, 1)"
+							}
+						}
+					],
+					"sid": 857757224928658,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 337570721446100
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 316235133078092,
+							"parameters": {
+								"variable": "LOCAL_INPUTS",
+								"value": "setbit(LOCAL_INPUTS, 2, 0)"
+							}
+						}
+					],
+					"sid": 247820325061922
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 245133807602020,
+							"parameters": {
+								"key": 40
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 144629372972331,
+							"parameters": {
+								"key": 83
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 282273761917402,
+							"parameters": {
+								"variable": "LOCAL_INPUTS",
+								"value": "setbit(LOCAL_INPUTS, 3, 1)"
+							}
+						}
+					],
+					"sid": 515877897996833,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 921752868980639
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 929542939369049,
+							"parameters": {
+								"variable": "LOCAL_INPUTS",
+								"value": "setbit(LOCAL_INPUTS, 3, 0)"
+							}
+						}
+					],
+					"sid": 509964687212759
+				}
+			],
+			"sid": 181365377705273
+		}
+	],
+	"sid": 880939369443232
+}

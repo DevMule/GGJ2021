@@ -2,25 +2,144 @@
 	"name": "ESGame",
 	"events": [
 		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "include",
+			"includeSheet": "ESController"
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "SIGNALLING",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 666034174037028
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 725738511066805
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "SPlayer",
+							"sid": 327853842429834
+						},
+						{
+							"id": "add-client-input-value",
+							"objectClass": "Multiplayer",
+							"sid": 739195177521365,
+							"parameters": {
+								"tag": "\"inputs\"",
+								"precision": "very-low-uint8-1-byte",
+								"interpolation": "none"
+							}
+						},
+						{
+							"id": "sync-object",
+							"objectClass": "Multiplayer",
+							"sid": 568103670636037,
+							"parameters": {
+								"object": "SPlayer",
+								"data": "position-only",
+								"precision": "low-int16-2-bytes",
+								"bandwidth": "normal-bandwidth-unpredictable"
+							}
+						},
+						{
+							"id": "sync-instance-variable",
+							"objectClass": "Multiplayer",
+							"sid": 203049263779808,
+							"parameters": {
+								"object": "SPlayer",
+								"instance-variable": {
+									"name": "inputs",
+									"objectClass": "SPlayer"
+								},
+								"precision": "very-low-uint8-1-byte",
+								"interpolation": "none",
+								"client-value-tag": "\"inputs\""
+							}
+						}
+					],
+					"sid": 804944957454428,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-host",
+									"objectClass": "Multiplayer",
+									"sid": 246745608706727
+								}
+							],
+							"actions": [
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 567505630644684,
+									"parameters": {
+										"group-name": "\"HOST\"",
+										"state": "activated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 832821350358190,
+									"parameters": {
+										"group-name": "\"PEER\"",
+										"state": "deactivated"
+									}
+								},
+								{
+									"callFunction": "onPlayerEnter",
+									"sid": 432805842052486,
+									"parameters": [
+										"Multiplayer.MyID"
+									]
+								}
+							],
+							"sid": 865017538573193
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-host",
+									"objectClass": "Multiplayer",
+									"sid": 394968529878647,
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 131884694603414,
+									"parameters": {
+										"group-name": "\"HOST\"",
+										"state": "deactivated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 427722951073872,
+									"parameters": {
+										"group-name": "\"PEER\"",
+										"state": "activated"
+									}
+								}
+							],
+							"sid": 668024584881798
+						}
+					]
 				}
 			],
-			"actions": [
-				{
-					"id": "set-layout-scale",
-					"objectClass": "System",
-					"sid": 722878662795377,
-					"parameters": {
-						"scale": "4"
-					}
-				}
-			],
-			"sid": 345000710341929
+			"sid": 712625897891187
 		},
 		{
 			"eventType": "group",
@@ -30,24 +149,203 @@
 			"isActiveOnStart": true,
 			"children": [
 				{
-					"functionName": "initGame",
+					"functionName": "onPlayerLeave",
 					"functionDescription": "",
 					"functionCategory": "game",
 					"functionReturnType": "none",
-					"functionIsAsync": true,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 984361161531243
+				},
+				{
+					"functionName": "onPlayerEnter",
+					"functionDescription": "",
+					"functionCategory": "game",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
 					"functionParameters": [
 						{
-							"name": "new_player_id",
-							"type": "number",
-							"initialValue": "0",
+							"name": "pid",
+							"type": "string",
+							"initialValue": "",
 							"comment": "",
-							"sid": 695529660225290
+							"sid": 497641788166526
 						}
 					],
 					"eventType": "function-block",
 					"conditions": [],
-					"actions": [],
-					"sid": 399278180835844
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 253647441233002,
+							"parameters": {
+								"object-to-create": "SPlayer",
+								"layer": "\"game\"",
+								"x": "random(500)",
+								"y": "random(500)"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "SPlayer",
+							"sid": 289002547713297,
+							"parameters": {
+								"instance-variable": "pid",
+								"value": "pid"
+							}
+						},
+						{
+							"id": "associate-object-with-peer",
+							"objectClass": "Multiplayer",
+							"sid": 616264073484720,
+							"parameters": {
+								"object": "SPlayer",
+								"peer-id": "pid"
+							}
+						}
+					],
+					"sid": 794716508861568
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "SPlayer",
+							"sid": 972415102681050,
+							"parameters": {
+								"instance-variable": "pid",
+								"comparison": 0,
+								"value": "Multiplayer.MyID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "SPlayer",
+							"sid": 642566072371036,
+							"parameters": {
+								"instance-variable": "inputs",
+								"value": "LOCAL_INPUTS"
+							}
+						}
+					],
+					"sid": 307911150765453,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 445103659500228,
+									"parameters": {
+										"first-value": "getbit(SPlayer.inputs, 0)",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "SPlayer",
+									"sid": 516168752796875,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"control": "left"
+									}
+								}
+							],
+							"sid": 317204378033655
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 385907881017525,
+									"parameters": {
+										"first-value": "getbit(SPlayer.inputs, 1)",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "SPlayer",
+									"sid": 882390023297307,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"control": "right"
+									}
+								}
+							],
+							"sid": 196280790381721
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 453857474936572,
+									"parameters": {
+										"first-value": "getbit(SPlayer.inputs, 2)",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "SPlayer",
+									"sid": 644996642365444,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"control": "up"
+									}
+								}
+							],
+							"sid": 288297924902493
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 327627473962463,
+									"parameters": {
+										"first-value": "getbit(SPlayer.inputs, 3)",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "SPlayer",
+									"sid": 981539174343382,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"control": "down"
+									}
+								}
+							],
+							"sid": 318533777187790
+						}
+					]
 				}
 			],
 			"sid": 346060190745918
@@ -57,8 +355,175 @@
 			"disabled": false,
 			"title": "HOST",
 			"description": "",
-			"isActiveOnStart": true,
-			"children": [],
+			"isActiveOnStart": false,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "SPlayer",
+							"sid": 866487479274182,
+							"parameters": {
+								"instance-variable": "pid",
+								"comparison": 0,
+								"value": "Multiplayer.MyID"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 837583585269735,
+							"parameters": {
+								"object": "SPlayer"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "SPlayer",
+							"sid": 894053250130357,
+							"parameters": {
+								"instance-variable": "inputs",
+								"value": "Multiplayer.PeerState(SPlayer.pid, \"inputs\")"
+							}
+						}
+					],
+					"sid": 174993227653623,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 917032913668095,
+									"parameters": {
+										"first-value": "getbit(SPlayer.inputs, 0)",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "SPlayer",
+									"sid": 374380922491293,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"control": "left"
+									}
+								}
+							],
+							"sid": 882821905794270
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 319784739078415,
+									"parameters": {
+										"first-value": "getbit(SPlayer.inputs, 1)",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "SPlayer",
+									"sid": 448734416862422,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"control": "right"
+									}
+								}
+							],
+							"sid": 660352115401546
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 231517298538346,
+									"parameters": {
+										"first-value": "getbit(SPlayer.inputs, 2)",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "SPlayer",
+									"sid": 578855511478186,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"control": "up"
+									}
+								}
+							],
+							"sid": 527935999865589
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 153181635097545,
+									"parameters": {
+										"first-value": "getbit(SPlayer.inputs, 3)",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "SPlayer",
+									"sid": 399397883926970,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"control": "down"
+									}
+								}
+							],
+							"sid": 824089181207319
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-peer-connected",
+							"objectClass": "Multiplayer",
+							"sid": 755556823843984
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "onPlayerEnter",
+							"sid": 854286252034860,
+							"parameters": [
+								"Multiplayer.PeerID"
+							]
+						}
+					],
+					"sid": 598574574967668
+				}
+			],
 			"sid": 223114968368341
 		},
 		{
@@ -66,8 +531,100 @@
 			"disabled": false,
 			"title": "PEER",
 			"description": "",
-			"isActiveOnStart": true,
-			"children": [],
+			"isActiveOnStart": false,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "SPlayer",
+							"sid": 784888135994560
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "SPlayer",
+							"sid": 620126732064816,
+							"parameters": {
+								"instance-variable": "pid",
+								"value": "Multiplayer.PeerID"
+							}
+						},
+						{
+							"id": "associate-object-with-peer",
+							"objectClass": "Multiplayer",
+							"sid": 263147571873051,
+							"parameters": {
+								"object": "SPlayer",
+								"peer-id": "Multiplayer.PeerID"
+							}
+						}
+					],
+					"sid": 203777588016964,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "SPlayer",
+									"sid": 966744269115257,
+									"parameters": {
+										"instance-variable": "pid",
+										"comparison": 0,
+										"value": "Multiplayer.MyID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "enable-local-input-prediction",
+									"objectClass": "Multiplayer",
+									"sid": 357286881878114,
+									"parameters": {
+										"object": "SPlayer"
+									}
+								}
+							],
+							"sid": 115982489031031
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-client-update",
+							"objectClass": "Multiplayer",
+							"sid": 938918817440187
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "SPlayer",
+							"sid": 593637282916997,
+							"parameters": {
+								"instance-variable": "pid",
+								"comparison": 0,
+								"value": "Multiplayer.MyID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-client-state",
+							"objectClass": "Multiplayer",
+							"sid": 582974835821967,
+							"parameters": {
+								"tag": "\"inputs\"",
+								"value": "LOCAL_INPUTS"
+							}
+						}
+					],
+					"sid": 442792561158930
+				}
+			],
 			"sid": 932251385640048
 		}
 	],

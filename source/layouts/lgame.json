@@ -15,9 +15,9 @@
 				1
 			],
 			"backgroundColor": [
-				1,
-				1,
-				1,
+				0.10196078431372549,
+				0.10588235294117647,
+				0.12549019607843137,
 				1
 			],
 			"isTransparent": false,
@@ -43,7 +43,11 @@
 						"live-preview": false
 					},
 					"uid": 3,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"pid": "",
+						"state": "",
+						"inputs": 0
+					},
 					"behaviors": {
 						"8Direction": {
 							"properties": {
@@ -51,9 +55,9 @@
 								"acceleration": 600,
 								"deceleration": 500,
 								"directions": "dir-8",
-								"set-angle": "smooth",
+								"set-angle": "no",
 								"default-controls": false,
-								"enabled": false
+								"enabled": true
 							}
 						},
 						"ScrollTo": {
@@ -63,8 +67,8 @@
 						}
 					},
 					"world": {
-						"x": 237,
-						"y": 232,
+						"x": 16,
+						"y": -41,
 						"width": 32,
 						"height": 32,
 						"originX": 0.5,
@@ -146,5 +150,5 @@
 	"width": 1920,
 	"height": 1080,
 	"unboundedScrolling": true,
-	"eventSheet": "ESMaster"
+	"eventSheet": "ESGame"
 }

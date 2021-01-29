@@ -12,16 +12,18 @@
 			"sid": 233455806297545
 		},
 		{
+			"eventType": "variable",
+			"name": "NICKNAME",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 872725372852400
+		},
+		{
 			"eventType": "include",
 			"includeSheet": "ESMenu"
-		},
-		{
-			"eventType": "include",
-			"includeSheet": "ESLobby"
-		},
-		{
-			"eventType": "include",
-			"includeSheet": "ESGame"
 		},
 		{
 			"eventType": "include",

@@ -220,6 +220,28 @@
 				}
 			],
 			"sid": 723730944163983
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-text-changed",
+					"objectClass": "InputNick",
+					"sid": 329857073017669
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 117864356775841,
+					"parameters": {
+						"variable": "NICKNAME",
+						"value": "trim(InputNick.Text)"
+					}
+				}
+			],
+			"sid": 343663600359523
 		}
 	],
 	"sid": 519072054679485

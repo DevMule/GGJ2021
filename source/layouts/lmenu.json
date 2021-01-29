@@ -61,10 +61,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 745,
-						"y": 430,
+						"x": 744,
+						"y": 445,
 						"width": 452,
-						"height": 81.71625344352606,
+						"height": 69.71625344352606,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -108,6 +108,80 @@
 							1
 						]
 					}
+				},
+				{
+					"type": "InputNick",
+					"properties": {
+						"text": "",
+						"placeholder": "nickname",
+						"tooltip": "",
+						"initially-visible": true,
+						"enabled": true,
+						"read-only": false,
+						"spell-check": false,
+						"type": "text",
+						"auto-font-size": true,
+						"id": ""
+					},
+					"uid": 12,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 813,
+						"y": 347,
+						"width": 314,
+						"height": 80,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"type": "TStatic",
+					"properties": {
+						"text": "nickname",
+						"enable-bbcode": true,
+						"font": "VT323-Regular",
+						"size": 44,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 14,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 748,
+						"y": 276,
+						"width": 452,
+						"height": 68.71625344352606,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 269480951573494,
@@ -136,7 +210,14 @@
 		}
 	],
 	"sid": 926612414896887,
-	"nonworld-instances": [],
+	"nonworld-instances": [
+		{
+			"type": "JSONPlayer",
+			"properties": {},
+			"uid": 15,
+			"instanceVariables": {}
+		}
+	],
 	"effectTypes": [],
 	"width": 1920,
 	"height": 1080,
