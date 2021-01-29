@@ -1,9 +1,11 @@
 {
 	"multiplayer": {
+		"maxPeers": 16,
 		"signallingServer": "wss://multiplayer.scirra.com",
 		"gameID": "ggj2021-devmule-lost-and-found"
 	},
 	"game": {
-		"roundTime": 300000
+		"roundTime": 300000,
+		"inventorySize": 3
 	}
 }

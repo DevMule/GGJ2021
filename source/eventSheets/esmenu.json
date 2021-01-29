@@ -1,0 +1,226 @@
+{
+	"name": "ESMenu",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "BtnConnectRoom",
+					"sid": 493995729420807
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 932655952953308,
+					"parameters": {
+						"layout": "LError"
+					}
+				}
+			],
+			"sid": 881139990777546,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "room_id",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 120609137590646
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 395881930373237,
+							"parameters": {
+								"variable": "room_id",
+								"value": "trim(InputRoomId.Text)"
+							}
+						}
+					],
+					"sid": 201073914780082
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 520693363228450,
+							"parameters": {
+								"first-value": "len(room_id)",
+								"comparison": 4,
+								"second-value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "BtnConnectRoom",
+							"sid": 726106097220907,
+							"parameters": {
+								"mode": "disabled"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "InputRoomId",
+							"sid": 750237912776618,
+							"parameters": {
+								"mode": "disabled"
+							}
+						},
+						{
+							"callFunction": "connect to",
+							"sid": 790345044814903,
+							"parameters": [
+								"room_id"
+							]
+						}
+					],
+					"sid": 920877273073801
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-text-changed",
+					"objectClass": "InputRoomId",
+					"sid": 658194240019979
+				}
+			],
+			"actions": [],
+			"sid": 371209092899611,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "room_id",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 498724145027533
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 602108137797002,
+							"parameters": {
+								"variable": "room_id",
+								"value": "trim(InputRoomId.Text)"
+							}
+						}
+					],
+					"sid": 953253505487562
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 808825832043028,
+							"parameters": {
+								"first-value": "len(room_id)",
+								"comparison": 4,
+								"second-value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "BtnConnectRoom",
+							"sid": 184352997529493,
+							"parameters": {
+								"mode": "enabled"
+							}
+						}
+					],
+					"sid": 869407156719432
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 575937183912482
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "BtnConnectRoom",
+							"sid": 917031250153772,
+							"parameters": {
+								"mode": "disabled"
+							}
+						}
+					],
+					"sid": 129513809369811
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-logged-in",
+					"objectClass": "Multiplayer",
+					"sid": 917350606421327
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "InputRoomId",
+					"sid": 236425137018551,
+					"parameters": {
+						"mode": "enabled"
+					}
+				}
+			],
+			"sid": 405771469585723
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-logged-in",
+					"objectClass": "Multiplayer",
+					"sid": 421966006941854,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "InputRoomId",
+					"sid": 138154707928569,
+					"parameters": {
+						"mode": "disabled"
+					}
+				}
+			],
+			"sid": 723730944163983
+		}
+	],
+	"sid": 519072054679485
+}

@@ -2,6 +2,24 @@
 	"name": "ESMaster",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "ERR_MSG",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 233455806297545
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "ESMenu"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "ESLobby"
+		},
+		{
 			"eventType": "include",
 			"includeSheet": "ESGame"
 		},
@@ -16,6 +34,27 @@
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 209659716883246
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "TError",
+							"sid": 224559222372351,
+							"parameters": {
+								"text": "ERR_MSG"
+							}
+						}
+					],
+					"sid": 472606855767785
+				},
 				{
 					"functionName": "onError",
 					"functionDescription": "",
@@ -43,27 +82,16 @@
 							}
 						},
 						{
-							"id": "set-text",
-							"objectClass": "TError",
-							"sid": 972944319055072,
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 529618426129085,
 							"parameters": {
-								"text": "error"
+								"variable": "ERR_MSG",
+								"value": "\"error:\" & error"
 							}
 						}
 					],
 					"sid": 924519186208584
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-clicked",
-							"objectClass": "BtnCreateGame",
-							"sid": 833754562287299
-						}
-					],
-					"actions": [],
-					"sid": 243865036596024
 				}
 			],
 			"sid": 402708457169428
@@ -79,16 +107,25 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-load-complete",
+							"id": "on-start-of-layout",
 							"objectClass": "System",
-							"sid": 317826445766827
+							"sid": 792309600726064
+						},
+						{
+							"id": "has-key",
+							"objectClass": "JSONSettings",
+							"sid": 879552483193331,
+							"parameters": {
+								"path": "\"init\""
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
 						{
 							"id": "request-url",
 							"objectClass": "AJAX",
-							"sid": 535936277645394,
+							"sid": 437723243558163,
 							"parameters": {
 								"tag": "\"settings\"",
 								"url": "\"settings.json\""
@@ -112,10 +149,19 @@
 					"actions": [
 						{
 							"id": "parse",
-							"objectClass": "JSONSetiings",
+							"objectClass": "JSONSettings",
 							"sid": 406192252509200,
 							"parameters": {
 								"data": "AJAX.LastData"
+							}
+						},
+						{
+							"id": "set-value",
+							"objectClass": "JSONSettings",
+							"sid": 606262246899211,
+							"parameters": {
+								"path": "\"init\"",
+								"value": "1"
 							}
 						},
 						{

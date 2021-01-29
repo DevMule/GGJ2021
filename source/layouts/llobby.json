@@ -1,22 +1,22 @@
 {
-	"name": "LError",
+	"name": "LLobby",
 	"layers": [
 		{
 			"name": "interface",
 			"overriden": 0,
 			"instances": [
 				{
-					"type": "TError",
+					"type": "TPeerCount",
 					"properties": {
-						"text": "error text",
+						"text": "users: 0",
 						"enable-bbcode": true,
 						"font": "VT323-Regular",
-						"size": 40,
+						"size": 44,
 						"line-height": 0,
-						"bold": false,
+						"bold": true,
 						"italic": false,
 						"color": [
-							1,
+							0,
 							0,
 							0,
 							1
@@ -27,14 +27,14 @@
 						"initially-visible": true,
 						"origin": "top-left"
 					},
-					"uid": 8,
+					"uid": 13,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 86.60303207817964,
-						"y": 96.1520786198625,
-						"width": 1747.1125666613511,
-						"height": 915.3331043956957,
+						"x": 57,
+						"y": 45,
+						"width": 452,
+						"height": 98.71625344352606,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -48,7 +48,7 @@
 					}
 				}
 			],
-			"sid": 151792912605461,
+			"sid": 542378019311377,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"color": [
@@ -58,9 +58,9 @@
 				1
 			],
 			"backgroundColor": [
-				0.23921568627450981,
-				0.23921568627450981,
-				0.23921568627450981,
+				1,
+				1,
+				1,
 				1
 			],
 			"isTransparent": false,
@@ -73,7 +73,7 @@
 			"global": false
 		}
 	],
-	"sid": 127218545461573,
+	"sid": 621711632974794,
 	"nonworld-instances": [],
 	"effectTypes": [],
 	"width": 1920,

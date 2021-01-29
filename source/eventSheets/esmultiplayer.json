@@ -2,75 +2,180 @@
 	"name": "ESMultiplayer",
 	"events": [
 		{
-			"functionName": "RunMultiplayer",
-			"functionDescription": "",
-			"functionCategory": "Multiplayer",
-			"functionReturnType": "none",
-			"functionIsAsync": true,
-			"functionParameters": [],
-			"eventType": "function-block",
-			"conditions": [],
-			"actions": [
+			"eventType": "group",
+			"disabled": false,
+			"title": "connection",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "connect",
-					"objectClass": "Multiplayer",
-					"sid": 872040890421148,
-					"parameters": {
-						"server": "JSONSetiings.Get(\"multiplayer.signallingServer\")"
-					}
-				}
-			],
-			"sid": 729312564503474
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-connected",
-					"objectClass": "Multiplayer",
-					"sid": 921777366254858
-				}
-			],
-			"actions": [
-				{
-					"id": "set-text",
-					"objectClass": "TError",
-					"sid": 339114004438384,
-					"parameters": {
-						"text": "1"
-					}
+					"functionName": "RunMultiplayer",
+					"functionDescription": "",
+					"functionCategory": "Multiplayer",
+					"functionReturnType": "none",
+					"functionIsAsync": true,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "connect",
+							"objectClass": "Multiplayer",
+							"sid": 308823069586500,
+							"parameters": {
+								"server": "JSONSettings.Get(\"multiplayer.signallingServer\")"
+							}
+						}
+					],
+					"sid": 841238559952349
 				},
 				{
-					"id": "log-in",
-					"objectClass": "Multiplayer",
-					"sid": 532656166452199,
-					"parameters": {
-						"alias": "\"\""
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-connected",
+							"objectClass": "Multiplayer",
+							"sid": 952124591435924
+						}
+					],
+					"actions": [
+						{
+							"id": "log-in",
+							"objectClass": "Multiplayer",
+							"sid": 952834608155762,
+							"parameters": {
+								"alias": "\"null\""
+							}
+						}
+					],
+					"sid": 553627491927162
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-error",
+							"objectClass": "Multiplayer",
+							"sid": 496601888662945
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "onError",
+							"sid": 419899703368569,
+							"parameters": [
+								"Multiplayer.ErrorMessage"
+							]
+						}
+					],
+					"sid": 406235928814898
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-disconnected",
+							"objectClass": "Multiplayer",
+							"sid": 738655914153522
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "onError",
+							"sid": 848336906642028,
+							"parameters": [
+								"\"connection lost\""
+							]
+						}
+					],
+					"sid": 468932483044408
 				}
 			],
-			"sid": 241434501577451
+			"sid": 768912588077624
 		},
 		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "group",
+			"disabled": false,
+			"title": "room lobby",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "on-error",
-					"objectClass": "Multiplayer",
-					"sid": 645789253453642
+					"functionName": "connect to",
+					"functionDescription": "",
+					"functionCategory": "Multiplayer",
+					"functionReturnType": "none",
+					"functionIsAsync": true,
+					"functionParameters": [
+						{
+							"name": "room_id",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 518530837096228
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "join-room",
+							"objectClass": "Multiplayer",
+							"sid": 234155442545190,
+							"parameters": {
+								"game": "JSONSettings.Get(\"multiplayer.gameID\")",
+								"instance": "\"default\"",
+								"room": "room_id",
+								"max-peers": "JSONSettings.Get(\"multiplayer.maxPeers\")"
+							}
+						}
+					],
+					"sid": 739198371693877
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-joined-room",
+							"objectClass": "Multiplayer",
+							"sid": 642258450920349
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 721515613082836,
+							"parameters": {
+								"layout": "LLobby"
+							}
+						}
+					],
+					"sid": 447118600984535
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-left-room",
+							"objectClass": "Multiplayer",
+							"sid": 585632992648754
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 373813477288914,
+							"parameters": {
+								"layout": "LMenu"
+							}
+						}
+					],
+					"sid": 861810048998774
 				}
 			],
-			"actions": [
-				{
-					"id": "set-text",
-					"objectClass": "TError",
-					"sid": 662454230655228,
-					"parameters": {
-						"text": "0"
-					}
-				}
-			],
-			"sid": 306192170019575
+			"sid": 953079535784803
 		}
 	],
 	"sid": 615563815578794

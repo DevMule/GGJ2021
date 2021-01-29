@@ -1,7 +1,7 @@
 {
-	"name": "BtnCreateGame",
+	"name": "BtnConnectRoom",
 	"plugin-id": "Button",
-	"sid": 221954522769422,
+	"sid": 535626690003557,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": []

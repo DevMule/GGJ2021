@@ -2,16 +2,6 @@
 	"name": "ESGame",
 	"events": [
 		{
-			"eventType": "variable",
-			"name": "PLAYER_ID",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 306950255881736
-		},
-		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -56,21 +46,29 @@
 					],
 					"eventType": "function-block",
 					"conditions": [],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 741504152044077,
-							"parameters": {
-								"variable": "PLAYER_ID",
-								"value": "new_player_id"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 399278180835844
 				}
 			],
 			"sid": 346060190745918
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "HOST",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [],
+			"sid": 223114968368341
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "PEER",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [],
+			"sid": 932251385640048
 		}
 	],
 	"sid": 313727134619767

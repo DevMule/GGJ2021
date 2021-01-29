@@ -136,7 +136,7 @@
 	"sid": 250910830226539,
 	"nonworld-instances": [
 		{
-			"type": "JSONSetiings",
+			"type": "JSONSettings",
 			"properties": {},
 			"uid": 4,
 			"instanceVariables": {}
