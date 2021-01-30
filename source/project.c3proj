@@ -177,17 +177,12 @@
 					"SShadowCaster",
 					"SSpawnPlayer",
 					"SSpawnDrop",
-					"SPlayerVis"
+					"SPlayerVis",
+					"SDropIndicator",
+					"SUIStatic",
+					"SUIInventoryFrame"
 				],
-				"subfolders": [
-					{
-						"items": [
-							"SDropIndicator"
-						],
-						"subfolders": [],
-						"name": "gameInterface"
-					}
-				],
+				"subfolders": [],
 				"name": "game"
 			}
 		]
@@ -221,7 +216,8 @@
 			"ESMaster",
 			"ESMenu",
 			"ESController",
-			"ESGameCycle"
+			"ESGameCycle",
+			"ESInterface"
 		],
 		"subfolders": []
 	},
@@ -344,7 +340,7 @@
 		"useLoaderLayout": false,
 		"fullscreenMode": "scale-outer",
 		"fullscreenQuality": "low",
-		"viewportFit": "cover",
+		"viewportFit": "auto",
 		"backgroundColor": [
 			0,
 			0,
@@ -379,7 +375,7 @@
 		"enhancedAccelerationPrecision": true,
 		"cordovaiOSScheme": "app"
 	},
-	"viewportWidth": 1920,
-	"viewportHeight": 1080,
+	"viewportWidth": 480,
+	"viewportHeight": 270,
 	"firstLayout": "LMenu"
 }

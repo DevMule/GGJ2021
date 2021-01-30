@@ -1,0 +1,801 @@
+{
+	"name": "ESInterface",
+	"events": [
+		{
+			"eventType": "comment",
+			"text": "equality"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SPlayer",
+					"sid": 991636658883225,
+					"parameters": {
+						"instance-variable": "pid",
+						"comparison": 0,
+						"value": "Multiplayer.MyID"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SUIInventoryFrame",
+					"sid": 693784157432142,
+					"parameters": {
+						"instance-variable": "index",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 711303195053038,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 556028973469168,
+							"parameters": {
+								"first-value": "SPlayer.need_1",
+								"comparison": 0,
+								"second-value": "SPlayer.pick_1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "SUIInventoryFrame",
+							"sid": 662752405718540,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 981366754438580
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 296796110545776
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "SUIInventoryFrame",
+							"sid": 812146719354176,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 920423825372131
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SPlayer",
+					"sid": 137928829748994,
+					"parameters": {
+						"instance-variable": "pid",
+						"comparison": 0,
+						"value": "Multiplayer.MyID"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SUIInventoryFrame",
+					"sid": 954369714301820,
+					"parameters": {
+						"instance-variable": "index",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 425516000640192,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 250147730313823,
+							"parameters": {
+								"first-value": "SPlayer.need_2",
+								"comparison": 0,
+								"second-value": "SPlayer.pick_2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "SUIInventoryFrame",
+							"sid": 839665012911824,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 796440696271651
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 130649075537049
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "SUIInventoryFrame",
+							"sid": 143014805701627,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 855021689133602
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SPlayer",
+					"sid": 456154233791278,
+					"parameters": {
+						"instance-variable": "pid",
+						"comparison": 0,
+						"value": "Multiplayer.MyID"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SUIInventoryFrame",
+					"sid": 223143091121418,
+					"parameters": {
+						"instance-variable": "index",
+						"comparison": 0,
+						"value": "3"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 400443456935324,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 888315329016726,
+							"parameters": {
+								"first-value": "SPlayer.need_3",
+								"comparison": 0,
+								"second-value": "SPlayer.pick_3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "SUIInventoryFrame",
+							"sid": 445667004838012,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 764597077348425
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 243473208588247
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "SUIInventoryFrame",
+							"sid": 881197231856251,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 194546670768482
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "drop"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SPlayer",
+					"sid": 943884272946227,
+					"parameters": {
+						"instance-variable": "pid",
+						"comparison": 0,
+						"value": "Multiplayer.MyID"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SDropIndicator",
+					"sid": 539374254859633,
+					"parameters": {
+						"instance-variable": "drop_index",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "SDropIndicator",
+					"sid": 887470122729484,
+					"parameters": {
+						"instance-variable": "isInventory"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 236441599883046,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "SPlayer",
+							"sid": 109987322177871,
+							"parameters": {
+								"instance-variable": "pick_1",
+								"comparison": 5,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "SDropIndicator",
+							"sid": 667903713857710,
+							"parameters": {
+								"opacity": "100"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "SDropIndicator",
+							"sid": 528173872039349,
+							"parameters": {
+								"frame-number": "SPlayer.pick_1"
+							}
+						}
+					],
+					"sid": 965578174934455
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 446384598303747
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "SDropIndicator",
+							"sid": 806804285203533,
+							"parameters": {
+								"opacity": "0"
+							}
+						}
+					],
+					"sid": 961864817543057
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SPlayer",
+					"sid": 795598961976689,
+					"parameters": {
+						"instance-variable": "pid",
+						"comparison": 0,
+						"value": "Multiplayer.MyID"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SDropIndicator",
+					"sid": 810798300110792,
+					"parameters": {
+						"instance-variable": "drop_index",
+						"comparison": 0,
+						"value": "2"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "SDropIndicator",
+					"sid": 759012080241709,
+					"parameters": {
+						"instance-variable": "isInventory"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 655145029922258,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "SPlayer",
+							"sid": 247389071724429,
+							"parameters": {
+								"instance-variable": "pick_2",
+								"comparison": 5,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "SDropIndicator",
+							"sid": 967389553590658,
+							"parameters": {
+								"opacity": "100"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "SDropIndicator",
+							"sid": 315678228992899,
+							"parameters": {
+								"frame-number": "SPlayer.pick_2"
+							}
+						}
+					],
+					"sid": 884467680429442
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 232343398127722
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "SDropIndicator",
+							"sid": 110011845820498,
+							"parameters": {
+								"opacity": "0"
+							}
+						}
+					],
+					"sid": 716701401715561
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SPlayer",
+					"sid": 563206406627130,
+					"parameters": {
+						"instance-variable": "pid",
+						"comparison": 0,
+						"value": "Multiplayer.MyID"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SDropIndicator",
+					"sid": 156289817105125,
+					"parameters": {
+						"instance-variable": "drop_index",
+						"comparison": 0,
+						"value": "3"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "SDropIndicator",
+					"sid": 449635987682593,
+					"parameters": {
+						"instance-variable": "isInventory"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 916984117418487,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "SPlayer",
+							"sid": 122772027433609,
+							"parameters": {
+								"instance-variable": "pick_3",
+								"comparison": 5,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "SDropIndicator",
+							"sid": 766979365210880,
+							"parameters": {
+								"opacity": "100"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "SDropIndicator",
+							"sid": 677120177478045,
+							"parameters": {
+								"frame-number": "SPlayer.pick_3"
+							}
+						}
+					],
+					"sid": 432330606574549
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 409452155841730
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "SDropIndicator",
+							"sid": 192437879988743,
+							"parameters": {
+								"opacity": "0"
+							}
+						}
+					],
+					"sid": 328277084690378
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "need"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SPlayer",
+					"sid": 358176459184113,
+					"parameters": {
+						"instance-variable": "pid",
+						"comparison": 0,
+						"value": "Multiplayer.MyID"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SDropIndicator",
+					"sid": 210305690953996,
+					"parameters": {
+						"instance-variable": "drop_index",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "SDropIndicator",
+					"sid": 549698275437103,
+					"parameters": {
+						"instance-variable": "isInventory"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [],
+			"sid": 324557066435930,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "SPlayer",
+							"sid": 592791727516022,
+							"parameters": {
+								"instance-variable": "need_1",
+								"comparison": 5,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "SDropIndicator",
+							"sid": 678485138723755,
+							"parameters": {
+								"opacity": "100"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "SDropIndicator",
+							"sid": 649213546920716,
+							"parameters": {
+								"frame-number": "SPlayer.need_1"
+							}
+						}
+					],
+					"sid": 930532775560834
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 706153772543817
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "SDropIndicator",
+							"sid": 186097778431918,
+							"parameters": {
+								"opacity": "0"
+							}
+						}
+					],
+					"sid": 787579343443076
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SPlayer",
+					"sid": 520225845761903,
+					"parameters": {
+						"instance-variable": "pid",
+						"comparison": 0,
+						"value": "Multiplayer.MyID"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SDropIndicator",
+					"sid": 750941110019755,
+					"parameters": {
+						"instance-variable": "drop_index",
+						"comparison": 0,
+						"value": "2"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "SDropIndicator",
+					"sid": 899112002705963,
+					"parameters": {
+						"instance-variable": "isInventory"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [],
+			"sid": 296033590152458,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "SPlayer",
+							"sid": 266983784194440,
+							"parameters": {
+								"instance-variable": "need_2",
+								"comparison": 5,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "SDropIndicator",
+							"sid": 484516648275778,
+							"parameters": {
+								"opacity": "100"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "SDropIndicator",
+							"sid": 107203066041842,
+							"parameters": {
+								"frame-number": "SPlayer.need_2"
+							}
+						}
+					],
+					"sid": 719150384583759
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 135111510215876
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "SDropIndicator",
+							"sid": 775555619135642,
+							"parameters": {
+								"opacity": "0"
+							}
+						}
+					],
+					"sid": 317801904507146
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SPlayer",
+					"sid": 674544050186883,
+					"parameters": {
+						"instance-variable": "pid",
+						"comparison": 0,
+						"value": "Multiplayer.MyID"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SDropIndicator",
+					"sid": 702934691021334,
+					"parameters": {
+						"instance-variable": "drop_index",
+						"comparison": 0,
+						"value": "3"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "SDropIndicator",
+					"sid": 492804472639851,
+					"parameters": {
+						"instance-variable": "isInventory"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [],
+			"sid": 657830341494985,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "SPlayer",
+							"sid": 543537227929689,
+							"parameters": {
+								"instance-variable": "need_3",
+								"comparison": 5,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "SDropIndicator",
+							"sid": 306028708727446,
+							"parameters": {
+								"opacity": "100"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "SDropIndicator",
+							"sid": 524162275707741,
+							"parameters": {
+								"frame-number": "SPlayer.need_3"
+							}
+						}
+					],
+					"sid": 894616376539498
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 142387574443415
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "SDropIndicator",
+							"sid": 598138207047956,
+							"parameters": {
+								"opacity": "0"
+							}
+						}
+					],
+					"sid": 384105696436075
+				}
+			]
+		}
+	],
+	"sid": 226744073968533
+}

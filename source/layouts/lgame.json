@@ -75,13 +75,6 @@
 								"enabled": true,
 								"tags": ""
 							}
-						},
-						"ShadowCaster": {
-							"properties": {
-								"height": 10000,
-								"tag": "player",
-								"enabled": true
-							}
 						}
 					},
 					"ownData": {
@@ -1566,6 +1559,339 @@
 						],
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "SShadowCaster",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 66,
+					"instanceVariables": {},
+					"behaviors": {
+						"ShadowCaster": {
+							"properties": {
+								"height": 1000,
+								"tag": "player",
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 460,
+						"y": 283,
+						"width": 328,
+						"height": 10,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SShadowCaster",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 70,
+					"instanceVariables": {},
+					"behaviors": {
+						"ShadowCaster": {
+							"properties": {
+								"height": 1000,
+								"tag": "player",
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 621,
+						"y": 290,
+						"width": 6,
+						"height": 31,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SShadowCaster",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 1,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 67,
+					"instanceVariables": {},
+					"behaviors": {
+						"ShadowCaster": {
+							"properties": {
+								"height": 1000,
+								"tag": "player",
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 621,
+						"y": 321,
+						"width": 6,
+						"height": 22,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SShadowCaster",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 68,
+					"instanceVariables": {},
+					"behaviors": {
+						"ShadowCaster": {
+							"properties": {
+								"height": 1000,
+								"tag": "player",
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 621,
+						"y": 394,
+						"width": 6,
+						"height": 440,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SShadowCaster",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 69,
+					"instanceVariables": {},
+					"behaviors": {
+						"ShadowCaster": {
+							"properties": {
+								"height": 1000,
+								"tag": "player",
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 558,
+						"y": 514,
+						"width": 115,
+						"height": 3,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SShadowCaster",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 71,
+					"instanceVariables": {},
+					"behaviors": {
+						"ShadowCaster": {
+							"properties": {
+								"height": 1000,
+								"tag": "player",
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 557,
+						"y": 515,
+						"width": 6,
+						"height": 127,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SShadowCaster",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 72,
+					"instanceVariables": {},
+					"behaviors": {
+						"ShadowCaster": {
+							"properties": {
+								"height": 1000,
+								"tag": "player",
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 527,
+						"y": 642,
+						"width": 35,
+						"height": 3,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SShadowCaster",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 73,
+					"instanceVariables": {},
+					"behaviors": {
+						"ShadowCaster": {
+							"properties": {
+								"height": 1000,
+								"tag": "player",
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 525,
+						"y": 644,
+						"width": 6,
+						"height": 127,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SShadowCaster",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 1,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 74,
+					"instanceVariables": {},
+					"behaviors": {
+						"ShadowCaster": {
+							"properties": {
+								"height": 1000,
+								"tag": "player",
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 627,
+						"y": 517,
+						"width": 46,
+						"height": 24,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 425707549201907,
@@ -1575,35 +1901,7 @@
 				1,
 				1,
 				1,
-				1
-			],
-			"backgroundColor": [
-				1,
-				1,
-				1,
-				1
-			],
-			"isTransparent": true,
-			"parallaxX": 1,
-			"parallaxY": 1,
-			"scaleRate": 1,
-			"forceOwnTexture": false,
-			"useRenderCells": false,
-			"blendMode": "normal",
-			"global": false
-		},
-		{
-			"name": "walls",
-			"overriden": 0,
-			"instances": [],
-			"sid": 644607100972070,
-			"effectTypes": [],
-			"isInitiallyVisible": true,
-			"color": [
-				1,
-				1,
-				1,
-				1
+				0.5
 			],
 			"backgroundColor": [
 				1,
@@ -1625,6 +1923,35 @@
 			"overriden": 0,
 			"instances": [
 				{
+					"type": "SUIStatic",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 75,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3,
+						"y": 0,
+						"width": 110,
+						"height": 72,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "SDropIndicator",
 					"properties": {
 						"initially-visible": true,
@@ -1635,14 +1962,15 @@
 					},
 					"uid": 18,
 					"instanceVariables": {
-						"drop_index": 1
+						"drop_index": 1,
+						"isInventory": true
 					},
 					"behaviors": {},
 					"world": {
-						"x": 85,
-						"y": 84,
-						"width": 128,
-						"height": 128,
+						"x": 35,
+						"y": 51,
+						"width": 14,
+						"height": 18,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1666,14 +1994,15 @@
 					},
 					"uid": 19,
 					"instanceVariables": {
-						"drop_index": 2
+						"drop_index": 2,
+						"isInventory": true
 					},
 					"behaviors": {},
 					"world": {
-						"x": 237,
-						"y": 84,
-						"width": 128,
-						"height": 128,
+						"x": 64,
+						"y": 50,
+						"width": 14,
+						"height": 18,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1697,16 +2026,206 @@
 					},
 					"uid": 20,
 					"instanceVariables": {
-						"drop_index": 3
+						"drop_index": 3,
+						"isInventory": true
 					},
 					"behaviors": {},
 					"world": {
-						"x": 389,
-						"y": 84,
-						"width": 128,
-						"height": 128,
+						"x": 95,
+						"y": 50,
+						"width": 14,
+						"height": 18,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SDropIndicator",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 77,
+					"instanceVariables": {
+						"drop_index": 1,
+						"isInventory": false
+					},
+					"behaviors": {},
+					"world": {
+						"x": 30,
+						"y": 21,
+						"width": 14,
+						"height": 18,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SDropIndicator",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 78,
+					"instanceVariables": {
+						"drop_index": 2,
+						"isInventory": false
+					},
+					"behaviors": {},
+					"world": {
+						"x": 59,
+						"y": 20,
+						"width": 14,
+						"height": 18,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SDropIndicator",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 79,
+					"instanceVariables": {
+						"drop_index": 3,
+						"isInventory": false
+					},
+					"behaviors": {},
+					"world": {
+						"x": 88,
+						"y": 20,
+						"width": 14,
+						"height": 18,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SUIInventoryFrame",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 80,
+					"instanceVariables": {
+						"index": 1
+					},
+					"behaviors": {},
+					"world": {
+						"x": 23,
+						"y": 39,
+						"width": 25,
+						"height": 25,
+						"originX": 0.04,
+						"originY": 0.04,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SUIInventoryFrame",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 76,
+					"instanceVariables": {
+						"index": 2
+					},
+					"behaviors": {},
+					"world": {
+						"x": 53,
+						"y": 38,
+						"width": 25,
+						"height": 25,
+						"originX": 0.04,
+						"originY": 0.04,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SUIInventoryFrame",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 81,
+					"instanceVariables": {
+						"index": 3
+					},
+					"behaviors": {},
+					"world": {
+						"x": 84,
+						"y": 38,
+						"width": 25,
+						"height": 25,
+						"originX": 0.04,
+						"originY": 0.04,
 						"color": [
 							1,
 							1,

@@ -1,0 +1,56 @@
+{
+	"name": "SUIInventoryFrame",
+	"plugin-id": "Sprite",
+	"sid": 213488916205537,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "index",
+			"type": "number",
+			"desc": "",
+			"sid": 401633881342767
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 25,
+						"height": 25,
+						"originX": 0.04,
+						"originY": 0.04,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-ui-icons.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6130745,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 28,
+						"height": 25,
+						"originX": 0.07142857142857142,
+						"originY": 0.04,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-ui-icons.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1475442,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 641024916206299,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

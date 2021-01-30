@@ -30,7 +30,8 @@
 					}
 				}
 			],
-			"sid": 449371597102171
+			"sid": 449371597102171,
+			"disabled": true
 		},
 		{
 			"eventType": "group",
@@ -308,6 +309,10 @@
 			"sid": 752212200850156
 		},
 		{
+			"eventType": "comment",
+			"text": "drop"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -334,269 +339,70 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "for-each",
-					"objectClass": "System",
-					"sid": 683636008985589,
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 400335113730765,
 					"parameters": {
-						"object": "SPlayer"
+						"key": 49
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "set-position-to-another-object",
-					"objectClass": "SPlayerVis",
-					"sid": 490351337275747,
+					"callFunction": "dropItem",
+					"sid": 623042055955194,
+					"parameters": [
+						"1"
+					]
+				}
+			],
+			"sid": 117107430371312
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 599909290290697,
 					"parameters": {
-						"object": "SPlayer",
-						"image-point-optional": "0"
+						"key": 50
 					}
 				}
 			],
-			"sid": 802586894184541,
-			"children": [
+			"actions": [
 				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 238771011140225,
-							"parameters": {
-								"first-value": "getbit(SPlayer.inputs, 0)",
-								"comparison": 0,
-								"second-value": "1"
-							}
-						},
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 683638211173026,
-							"parameters": {
-								"first-value": "getbit(SPlayer.inputs, 1)",
-								"comparison": 0,
-								"second-value": "1"
-							}
-						}
-					],
-					"actions": [],
-					"sid": 705998273946286,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-animation-playing",
-									"objectClass": "SPlayerVis",
-									"sid": 322757747612178,
-									"parameters": {
-										"animation": "\"side\""
-									},
-									"isInverted": true
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "SPlayerVis",
-									"sid": 678415733903811,
-									"parameters": {
-										"animation": "\"side\"",
-										"from": "beginning"
-									}
-								}
-							],
-							"sid": 573572627447560
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-two-values",
-									"objectClass": "System",
-									"sid": 577147526809552,
-									"parameters": {
-										"first-value": "getbit(SPlayer.inputs, 0)",
-										"comparison": 0,
-										"second-value": "1"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-mirrored",
-									"objectClass": "SPlayerVis",
-									"sid": 897311614929251,
-									"parameters": {
-										"state": "mirrored"
-									}
-								}
-							],
-							"sid": 297159621045521
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "else",
-									"objectClass": "System",
-									"sid": 614527501873793
-								}
-							],
-							"actions": [
-								{
-									"id": "set-mirrored",
-									"objectClass": "SPlayerVis",
-									"sid": 403134350956869,
-									"parameters": {
-										"state": "not-mirrored"
-									}
-								}
-							],
-							"sid": 804552228312413
-						}
-					],
-					"isOrBlock": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 189926060267201
-						},
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 865441502251067,
-							"parameters": {
-								"first-value": "getbit(SPlayer.inputs, 2)",
-								"comparison": 0,
-								"second-value": "1"
-							}
-						},
-						{
-							"id": "is-animation-playing",
-							"objectClass": "SPlayerVis",
-							"sid": 257209078333402,
-							"parameters": {
-								"animation": "\"up\""
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation",
-							"objectClass": "SPlayerVis",
-							"sid": 920347796252670,
-							"parameters": {
-								"animation": "\"up\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "set-mirrored",
-							"objectClass": "SPlayerVis",
-							"sid": 175344001845302,
-							"parameters": {
-								"state": "not-mirrored"
-							}
-						}
-					],
-					"sid": 196873900026045
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 597661275443228
-						},
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 363847959753290,
-							"parameters": {
-								"first-value": "getbit(SPlayer.inputs, 3)",
-								"comparison": 0,
-								"second-value": "1"
-							}
-						},
-						{
-							"id": "is-animation-playing",
-							"objectClass": "SPlayerVis",
-							"sid": 373842672547777,
-							"parameters": {
-								"animation": "\"down\""
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation",
-							"objectClass": "SPlayerVis",
-							"sid": 473867119976447,
-							"parameters": {
-								"animation": "\"down\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "set-mirrored",
-							"objectClass": "SPlayerVis",
-							"sid": 770224736872636,
-							"parameters": {
-								"state": "not-mirrored"
-							}
-						}
-					],
-					"sid": 263389598898718
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 610481539675978
-						},
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "SPlayer",
-							"sid": 132804868215795,
-							"parameters": {
-								"instance-variable": "inputs",
-								"comparison": 0,
-								"value": "0"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation",
-							"objectClass": "SPlayerVis",
-							"sid": 574499023594947,
-							"parameters": {
-								"animation": "\"idle\"",
-								"from": "current-frame"
-							}
-						},
-						{
-							"id": "set-mirrored",
-							"objectClass": "SPlayerVis",
-							"sid": 514645002503168,
-							"parameters": {
-								"state": "not-mirrored"
-							}
-						}
-					],
-					"sid": 227837059711884
+					"callFunction": "dropItem",
+					"sid": 291904131549385,
+					"parameters": [
+						"2"
+					]
 				}
-			]
+			],
+			"sid": 598939910757036
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 592154861365764,
+					"parameters": {
+						"key": 51
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "dropItem",
+					"sid": 948947904367056,
+					"parameters": [
+						"3"
+					]
+				}
+			],
+			"sid": 190266923991597
 		}
 	],
 	"sid": 880939369443232
