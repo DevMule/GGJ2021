@@ -1,0 +1,20 @@
+{
+	"name": "zsorted",
+	"plugin-id": "Sprite",
+	"sid": 356080096149523,
+	"instanceVariables": [
+		{
+			"name": "yPos",
+			"type": "number",
+			"desc": "",
+			"sid": 499578165920836
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"SDrop",
+		"SFurniture",
+		"SPlayerVis"
+	]
+}

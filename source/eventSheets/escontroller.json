@@ -12,28 +12,6 @@
 			"sid": 426671789974246
 		},
 		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 842463962797005
-				}
-			],
-			"actions": [
-				{
-					"id": "set-layout-scale",
-					"objectClass": "System",
-					"sid": 342305944981718,
-					"parameters": {
-						"scale": "2.5"
-					}
-				}
-			],
-			"sid": 449371597102171,
-			"disabled": true
-		},
-		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "controller keyboard",

@@ -203,6 +203,7 @@
 					},
 					"uid": 10,
 					"instanceVariables": {
+						"yPos": 0,
 						"drop_uid": 0,
 						"drop_type": 0
 					},
@@ -252,6 +253,7 @@
 					},
 					"uid": 13,
 					"instanceVariables": {
+						"yPos": 0,
 						"isZsort": false
 					},
 					"behaviors": {
@@ -1478,7 +1480,9 @@
 						"live-preview": false
 					},
 					"uid": 65,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"yPos": 0
+					},
 					"behaviors": {},
 					"world": {
 						"x": 11,
@@ -2032,7 +2036,7 @@
 					"behaviors": {},
 					"world": {
 						"x": 95,
-						"y": 50,
+						"y": 49,
 						"width": 14,
 						"height": 18,
 						"originX": 0.5,
@@ -2189,7 +2193,7 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 53,
+						"x": 52,
 						"y": 38,
 						"width": 25,
 						"height": 25,
@@ -2220,8 +2224,8 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 84,
-						"y": 38,
+						"x": 83,
+						"y": 37,
 						"width": 25,
 						"height": 25,
 						"originX": 0.04,

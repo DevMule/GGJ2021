@@ -128,11 +128,11 @@
 						{
 							"id": "sync-object",
 							"objectClass": "Multiplayer",
-							"sid": 568103670636037,
+							"sid": 409745515492434,
 							"parameters": {
 								"object": "SPlayer",
 								"data": "position-only",
-								"precision": "low-int16-2-bytes",
+								"precision": "normal-float-4-bytes",
 								"bandwidth": "normal-bandwidth-unpredictable"
 							}
 						},
@@ -490,6 +490,64 @@
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 184027222989947
+						}
+					],
+					"actions": [],
+					"sid": 947091127822388,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 582622852972638,
+									"parameters": {
+										"object": "zsorted"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "zsorted",
+									"sid": 530195775624885,
+									"parameters": {
+										"instance-variable": "yPos",
+										"value": "Self.Y"
+									}
+								}
+							],
+							"sid": 743356157247616
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "sort-z-order",
+									"objectClass": "System",
+									"sid": 441779907932383,
+									"parameters": {
+										"object": "zsorted",
+										"instance-variable": {
+											"name": "yPos",
+											"objectClass": "zsorted"
+										}
+									}
+								}
+							],
+							"sid": 849017248699690
+						}
+					]
+				},
 				{
 					"eventType": "block",
 					"conditions": [
@@ -1665,6 +1723,14 @@
 									}
 								},
 								{
+									"id": "set-opacity",
+									"objectClass": "SPlayer",
+									"sid": 914818275263421,
+									"parameters": {
+										"opacity": "0"
+									}
+								},
+								{
 									"id": "set-instvar-value",
 									"objectClass": "SPlayer",
 									"sid": 258607875552854,
@@ -1920,6 +1986,14 @@
 						}
 					],
 					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "SPlayer",
+							"sid": 609556551584538,
+							"parameters": {
+								"opacity": "0"
+							}
+						},
 						{
 							"id": "set-instvar-value",
 							"objectClass": "SPlayer",
