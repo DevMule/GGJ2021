@@ -17,15 +17,6 @@
 			"actions": [
 				{
 					"id": "set-css-style",
-					"objectClass": "BtnConnectRoom",
-					"sid": 362143457496266,
-					"parameters": {
-						"property-name": "\"border\"",
-						"value": "\"0\""
-					}
-				},
-				{
-					"id": "set-css-style",
 					"objectClass": "InputNick",
 					"sid": 184281313982672,
 					"parameters": {
@@ -62,15 +53,6 @@
 				},
 				{
 					"id": "set-css-style",
-					"objectClass": "BtnConnectRoom",
-					"sid": 993668922230909,
-					"parameters": {
-						"property-name": "\"font-family\"",
-						"value": "\"Hardpixel\""
-					}
-				},
-				{
-					"id": "set-css-style",
 					"objectClass": "InputNick",
 					"sid": 861600063817548,
 					"parameters": {
@@ -86,143 +68,9 @@
 						"property-name": "\"font-family\"",
 						"value": "\"Hardpixel \""
 					}
-				},
-				{
-					"id": "set-css-style",
-					"objectClass": "BtnConnectRoom",
-					"sid": 691986815433621,
-					"parameters": {
-						"property-name": "\"color\"",
-						"value": "\"#ffffff\""
-					}
-				},
-				{
-					"id": "set-css-style",
-					"objectClass": "BtnConnectRoom",
-					"sid": 799922701369767,
-					"parameters": {
-						"property-name": "\"background-color\"",
-						"value": "\"#1a1b20\""
-					}
 				}
 			],
 			"sid": 252939229164710
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-clicked",
-					"objectClass": "BtnConnectRoom",
-					"sid": 493995729420807
-				}
-			],
-			"actions": [
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 932655952953308,
-					"parameters": {
-						"layout": "LError"
-					}
-				}
-			],
-			"sid": 881139990777546,
-			"children": [
-				{
-					"eventType": "variable",
-					"name": "room_id_",
-					"type": "string",
-					"initialValue": "",
-					"comment": "",
-					"isStatic": false,
-					"isConstant": false,
-					"sid": 120609137590646
-				},
-				{
-					"eventType": "variable",
-					"name": "nick",
-					"type": "string",
-					"initialValue": "",
-					"comment": "",
-					"isStatic": false,
-					"isConstant": false,
-					"sid": 752044078011470
-				},
-				{
-					"eventType": "block",
-					"conditions": [],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 395881930373237,
-							"parameters": {
-								"variable": "room_id_",
-								"value": "trim(InputRoomId.Text)"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 923924171811029,
-							"parameters": {
-								"variable": "nick",
-								"value": "trim(InputNick.Text)"
-							}
-						}
-					],
-					"sid": 201073914780082
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 520693363228450,
-							"parameters": {
-								"first-value": "len(room_id_)",
-								"comparison": 4,
-								"second-value": "3"
-							}
-						},
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 794064982889582,
-							"parameters": {
-								"first-value": "len(nick)",
-								"comparison": 4,
-								"second-value": "3"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-enabled",
-							"objectClass": "BtnConnectRoom",
-							"sid": 726106097220907,
-							"parameters": {
-								"mode": "disabled"
-							}
-						},
-						{
-							"id": "set-enabled",
-							"objectClass": "InputRoomId",
-							"sid": 750237912776618,
-							"parameters": {
-								"mode": "disabled"
-							}
-						},
-						{
-							"callFunction": "connect to",
-							"sid": 790345044814903
-						}
-					],
-					"sid": 920877273073801
-				}
-			]
 		},
 		{
 			"eventType": "block",
@@ -292,35 +140,53 @@
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 808825832043028,
+							"sid": 275935025826199,
 							"parameters": {
-								"first-value": "len(room_id_)",
-								"comparison": 4,
-								"second-value": "3"
+								"first-value": "room_id_",
+								"comparison": 1,
+								"second-value": "\"\""
 							}
 						},
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 658115593826385,
+							"sid": 850664376718753,
 							"parameters": {
-								"first-value": "len(nick)",
-								"comparison": 4,
-								"second-value": "3"
+								"first-value": "nick",
+								"comparison": 1,
+								"second-value": "\"\""
 							}
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 869407156719432,
+					"children": [
 						{
-							"id": "set-enabled",
-							"objectClass": "BtnConnectRoom",
-							"sid": 184352997529493,
-							"parameters": {
-								"mode": "enabled"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "SBtn",
+									"sid": 776318480791800,
+									"parameters": {
+										"comparison": 0,
+										"number": "5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "SBtn",
+									"sid": 502666153962547,
+									"parameters": {
+										"frame-number": "4"
+									}
+								}
+							],
+							"sid": 212473891950968
 						}
-					],
-					"sid": 869407156719432
+					]
 				},
 				{
 					"eventType": "block",
@@ -331,17 +197,35 @@
 							"sid": 575937183912482
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 129513809369811,
+					"children": [
 						{
-							"id": "set-enabled",
-							"objectClass": "BtnConnectRoom",
-							"sid": 917031250153772,
-							"parameters": {
-								"mode": "disabled"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "SBtn",
+									"sid": 987092823905282,
+									"parameters": {
+										"comparison": 0,
+										"number": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "SBtn",
+									"sid": 438474977838058,
+									"parameters": {
+										"frame-number": "5"
+									}
+								}
+							],
+							"sid": 448387396544601
 						}
-					],
-					"sid": 129513809369811
+					]
 				}
 			],
 			"isOrBlock": true
@@ -432,6 +316,35 @@
 				}
 			],
 			"sid": 606252130294457
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 831924496726995,
+					"parameters": {
+						"object": "SBtn"
+					}
+				},
+				{
+					"id": "compare-animation-frame",
+					"objectClass": "SBtn",
+					"sid": 186555185702913,
+					"parameters": {
+						"comparison": 0,
+						"number": "4"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "connect to",
+					"sid": 138312190268516
+				}
+			],
+			"sid": 119830832048984
 		}
 	],
 	"sid": 519072054679485

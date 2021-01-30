@@ -8,14 +8,6 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
-			"id": "Button",
-			"name": "Button",
-			"author": "Scirra",
-			"version": "r225",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
 			"id": "TextBox",
 			"name": "Text input",
 			"author": "Scirra",
@@ -141,6 +133,14 @@
 			"author": "Scirra",
 			"version": "r225",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
+			"author": "Scirra",
+			"version": "r225",
+			"bundled": false
 		}
 	],
 	"uniqueId": "386fi2mjm3p",
@@ -161,7 +161,6 @@
 		"subfolders": [
 			{
 				"items": [
-					"BtnConnectRoom",
 					"InputRoomId",
 					"InputNick"
 				],

@@ -4,7 +4,13 @@
 	"sid": 892144115325802,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 175953536197083
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -83,6 +89,18 @@
 								0.5
 							]
 						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 142,
+						"height": 39,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-title.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6384125,
 						"useCollisionPoly": true,
 						"duration": 1
 					}

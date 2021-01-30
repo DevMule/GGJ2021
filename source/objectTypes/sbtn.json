@@ -97,6 +97,42 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1
+					},
+					{
+						"width": 96,
+						"height": 30,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-connect-button.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 306575,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 96,
+						"height": 30,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-connect-button.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 707637,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 26,
+						"height": 21,
+						"originX": 0.5,
+						"originY": 0.5238095238095238,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-X.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7747263,
+						"useCollisionPoly": true,
+						"duration": 1
 					}
 				],
 				"sid": 446645566359050,

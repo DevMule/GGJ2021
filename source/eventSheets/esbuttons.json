@@ -549,6 +549,32 @@
 						}
 					],
 					"sid": 403217399232071
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "SBtn",
+							"sid": 441303207444851,
+							"parameters": {
+								"comparison": 0,
+								"number": "6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 697299696744353,
+							"parameters": {
+								"layer": "\"leaderboard\"",
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 886798823278220
 				}
 			]
 		}

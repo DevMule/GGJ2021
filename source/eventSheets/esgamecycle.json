@@ -51,6 +51,44 @@
 			"isActiveOnStart": true,
 			"children": [
 				{
+					"functionName": "showLeaderboard",
+					"functionDescription": "",
+					"functionCategory": "game cycle",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "leaderboard_text",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 123255972174287
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 996754849531144,
+							"parameters": {
+								"layer": "\"leaderboard\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TLeaderboard",
+							"sid": 740292320429792,
+							"parameters": {
+								"text": "leaderboard_text"
+							}
+						}
+					],
+					"sid": 593027932362232
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -482,15 +520,34 @@
 					],
 					"actions": [
 						{
-							"type": "comment",
-							"text": "todo получить рассчёты наград"
-						},
-						{
 							"callFunction": "endTimer",
 							"sid": 981635141995421
 						}
 					],
 					"sid": 826612876937267
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-peer-message",
+							"objectClass": "Multiplayer",
+							"sid": 371500596925174,
+							"parameters": {
+								"tag": "\"showLeaderboard\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "showLeaderboard",
+							"sid": 745908772728070,
+							"parameters": [
+								"Multiplayer.Message"
+							]
+						}
+					],
+					"sid": 384403099408448
 				},
 				{
 					"functionName": "endTimer",
@@ -536,21 +593,164 @@
 								{
 									"id": "broadcast-message",
 									"objectClass": "Multiplayer",
-									"sid": 663466402193985,
+									"sid": 233551112314122,
 									"parameters": {
 										"from-id": "Multiplayer.HostID",
 										"tag": "\"endTimer\"",
 										"message": "\"\"",
 										"mode": "reliable-ordered"
 									}
-								},
-								{
-									"type": "comment",
-									"text": "todo сделать рассчёты наград, отправить их"
 								}
 							],
 							"sid": 634568743927536,
 							"children": [
+								{
+									"eventType": "comment",
+									"text": "отсортировать игроков по очкам и выслать таблицу лидеров"
+								},
+								{
+									"eventType": "variable",
+									"name": "isSorting",
+									"type": "boolean",
+									"initialValue": "true",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 344540907114189
+								},
+								{
+									"eventType": "variable",
+									"name": "leaderboard_text",
+									"type": "string",
+									"initialValue": "",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 751987701238288
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "while",
+											"objectClass": "System",
+											"sid": 302789471119233
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 134129990942216,
+											"parameters": {
+												"variable": "isSorting"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 526003929718453,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-highestlowest",
+													"objectClass": "SPlayer",
+													"sid": 898171232915347,
+													"parameters": {
+														"which": "highest",
+														"instance-variable": "score"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 688717872634393,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "SPlayer",
+															"sid": 986805180758320,
+															"parameters": {
+																"instance-variable": "score",
+																"comparison": 0,
+																"value": "0"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 275804608309155,
+															"parameters": {
+																"variable": "isSorting",
+																"value": "false"
+															}
+														}
+													],
+													"sid": 371553926409028
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 463580536957925
+														}
+													],
+													"actions": [
+														{
+															"id": "add-to-eventvar",
+															"objectClass": "System",
+															"sid": 239404601839892,
+															"parameters": {
+																"variable": "leaderboard_text",
+																"value": "round(SPlayer.score) &\nright(\"     \", 5 - len(str(round(SPlayer.score)))) &\nMultiplayer.PeerAliasFromID(SPlayer.pid)\n& newline"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "SPlayer",
+															"sid": 875109700253394,
+															"parameters": {
+																"instance-variable": "score",
+																"value": "0"
+															}
+														}
+													],
+													"sid": 416932399858177
+												}
+											]
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "broadcast-message",
+											"objectClass": "Multiplayer",
+											"sid": 302228091684253,
+											"parameters": {
+												"from-id": "Multiplayer.HostID",
+												"tag": "\"showLeaderboard\"",
+												"message": "leaderboard_text",
+												"mode": "reliable-ordered"
+											}
+										},
+										{
+											"callFunction": "showLeaderboard",
+											"sid": 409035296017981,
+											"parameters": [
+												"leaderboard_text"
+											]
+										}
+									],
+									"sid": 375674754944634
+								},
 								{
 									"eventType": "comment",
 									"text": "очистить всё"
@@ -641,15 +841,6 @@
 											"parameters": {
 												"instance-variable": "need_3",
 												"value": "-1"
-											}
-										},
-										{
-											"id": "set-instvar-value",
-											"objectClass": "SPlayer",
-											"sid": 174687473738012,
-											"parameters": {
-												"instance-variable": "score",
-												"value": "0"
 											}
 										}
 									],
