@@ -33,27 +33,6 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-connected",
-							"objectClass": "Multiplayer",
-							"sid": 952124591435924
-						}
-					],
-					"actions": [
-						{
-							"id": "log-in",
-							"objectClass": "Multiplayer",
-							"sid": 952834608155762,
-							"parameters": {
-								"alias": "\"null\""
-							}
-						}
-					],
-					"sid": 553627491927162
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
 							"id": "on-error",
 							"objectClass": "Multiplayer",
 							"sid": 496601888662945
@@ -106,31 +85,82 @@
 					"functionCategory": "Multiplayer",
 					"functionReturnType": "none",
 					"functionIsAsync": true,
-					"functionParameters": [
-						{
-							"name": "room_id",
-							"type": "string",
-							"initialValue": "",
-							"comment": "",
-							"sid": 518530837096228
-						}
-					],
+					"functionParameters": [],
 					"eventType": "function-block",
 					"conditions": [],
+					"actions": [],
+					"sid": 739198371693877,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-logged-in",
+									"objectClass": "Multiplayer",
+									"sid": 589226194957186
+								}
+							],
+							"actions": [
+								{
+									"id": "join-room",
+									"objectClass": "Multiplayer",
+									"sid": 597153546300165,
+									"parameters": {
+										"game": "JSONSettings.Get(\"multiplayer.gameID\")",
+										"instance": "\"default\"",
+										"room": "ROOM_ID",
+										"max-peers": "JSONSettings.Get(\"multiplayer.maxPeers\")"
+									}
+								}
+							],
+							"sid": 569010296516461
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 216362726592258
+								}
+							],
+							"actions": [
+								{
+									"id": "log-in",
+									"objectClass": "Multiplayer",
+									"sid": 116269679551891,
+									"parameters": {
+										"alias": "NICKNAME"
+									}
+								}
+							],
+							"sid": 163455402328057
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-logged-in",
+							"objectClass": "Multiplayer",
+							"sid": 789368079812673
+						}
+					],
 					"actions": [
 						{
 							"id": "join-room",
 							"objectClass": "Multiplayer",
-							"sid": 234155442545190,
+							"sid": 610679757394055,
 							"parameters": {
 								"game": "JSONSettings.Get(\"multiplayer.gameID\")",
 								"instance": "\"default\"",
-								"room": "room_id",
+								"room": "ROOM_ID",
 								"max-peers": "JSONSettings.Get(\"multiplayer.maxPeers\")"
 							}
 						}
 					],
-					"sid": 739198371693877
+					"sid": 951715586076753
 				},
 				{
 					"eventType": "block",
@@ -160,6 +190,16 @@
 							"id": "on-left-room",
 							"objectClass": "Multiplayer",
 							"sid": 585632992648754
+						},
+						{
+							"id": "on-disconnected",
+							"objectClass": "Multiplayer",
+							"sid": 737602574460608
+						},
+						{
+							"id": "on-kicked",
+							"objectClass": "Multiplayer",
+							"sid": 409600471206212
 						}
 					],
 					"actions": [
@@ -172,7 +212,8 @@
 							}
 						}
 					],
-					"sid": 861810048998774
+					"sid": 861810048998774,
+					"isOrBlock": true
 				}
 			],
 			"sid": 953079535784803

@@ -244,6 +244,47 @@
 				}
 			],
 			"sid": 181365377705273
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 807056118314924,
+					"parameters": {
+						"key": 32
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SPlayer",
+					"sid": 360144102021959,
+					"parameters": {
+						"instance-variable": "pid",
+						"comparison": 0,
+						"value": "Multiplayer.MyID"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "SPlayer",
+					"sid": 114817159216092,
+					"parameters": {
+						"object": "SDrop"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "pickUpItem",
+					"sid": 780119160129205,
+					"parameters": [
+						"SDrop.drop_uid"
+					]
+				}
+			],
+			"sid": 752212200850156
 		}
 	],
 	"sid": 880939369443232

@@ -22,6 +22,16 @@
 			"sid": 872725372852400
 		},
 		{
+			"eventType": "variable",
+			"name": "ROOM_ID",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 128554506734898
+		},
+		{
 			"eventType": "include",
 			"includeSheet": "ESMenu"
 		},

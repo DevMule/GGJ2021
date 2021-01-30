@@ -11,16 +11,46 @@
 			"sid": 532170715244522
 		},
 		{
-			"name": "state",
-			"type": "string",
-			"desc": "json data",
-			"sid": 623786991461156
-		},
-		{
 			"name": "inputs",
 			"type": "number",
 			"desc": "",
 			"sid": 175150184747596
+		},
+		{
+			"name": "need_1",
+			"type": "number",
+			"desc": "",
+			"sid": 346085635994500
+		},
+		{
+			"name": "need_2",
+			"type": "number",
+			"desc": "",
+			"sid": 904504899598197
+		},
+		{
+			"name": "need_3",
+			"type": "number",
+			"desc": "",
+			"sid": 935428756711700
+		},
+		{
+			"name": "pick_1",
+			"type": "number",
+			"desc": "",
+			"sid": 623763926787602
+		},
+		{
+			"name": "pick_2",
+			"type": "number",
+			"desc": "",
+			"sid": 181025091975463
+		},
+		{
+			"name": "pick_3",
+			"type": "number",
+			"desc": "",
+			"sid": 149308939760513
 		}
 	],
 	"behaviorTypes": [

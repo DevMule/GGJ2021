@@ -1,0 +1,55 @@
+{
+	"name": "SDrop",
+	"plugin-id": "Sprite",
+	"sid": 382175733286746,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "drop_uid",
+			"type": "number",
+			"desc": "",
+			"sid": 796971647765676
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "EightDir",
+			"name": "8Direction",
+			"sid": 121874764637419
+		},
+		{
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 508421183541406
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8502523,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 421764350873481,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

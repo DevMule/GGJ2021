@@ -127,7 +127,8 @@
 			{
 				"items": [
 					"SPlayer",
-					"JSONPlayer"
+					"JSONPlayer",
+					"SDrop"
 				],
 				"subfolders": [],
 				"name": "game"
