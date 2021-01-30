@@ -105,7 +105,7 @@
 						{
 							"id": "set-layer-opacity",
 							"objectClass": "System",
-							"sid": 492636411588052,
+							"sid": 679791366877895,
 							"parameters": {
 								"layer": "\"shadows\"",
 								"opacity": "100"
@@ -413,58 +413,17 @@
 									}
 								}
 							],
-							"actions": [],
-							"sid": 678494315541630,
-							"children": [
+							"actions": [
 								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-y",
-											"objectClass": "SShadowCaster",
-											"sid": 529566657883158,
-											"parameters": {
-												"comparison": 2,
-												"y-co-ordinate": "SPlayer.Y - Self.Height/2"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-enabled",
-											"objectClass": "SShadowCaster",
-											"sid": 986241878349840,
-											"behaviorType": "ShadowCaster",
-											"parameters": {
-												"state": "disabled"
-											}
-										}
-									],
-									"sid": 582846745572523
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "else",
-											"objectClass": "System",
-											"sid": 541122247871521
-										}
-									],
-									"actions": [
-										{
-											"id": "set-enabled",
-											"objectClass": "SShadowCaster",
-											"sid": 885186659992263,
-											"behaviorType": "ShadowCaster",
-											"parameters": {
-												"state": "enabled"
-											}
-										}
-									],
-									"sid": 375699140819679
+									"id": "set-height",
+									"objectClass": "SShadowCaster",
+									"sid": 710968830750411,
+									"parameters": {
+										"height": "max(0,\r\nmin(26,\r\nSShadowCaster.Y + 26 - SPlayer.Y\n))"
+									}
 								}
-							]
+							],
+							"sid": 678494315541630
 						}
 					]
 				}
@@ -499,6 +458,14 @@
 									"sid": 582622852972638,
 									"parameters": {
 										"object": "zsorted"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "zsorted",
+									"sid": 328320102571246,
+									"parameters": {
+										"instance-variable": "ZSorting"
 									}
 								}
 							],

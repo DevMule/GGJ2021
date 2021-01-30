@@ -170,14 +170,6 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "pick-random-instance",
-									"objectClass": "System",
-									"sid": 906297105112932,
-									"parameters": {
-										"object": "SSpawnPlayer"
-									}
-								},
-								{
 									"id": "compare-instance-variable",
 									"objectClass": "SPlayer",
 									"sid": 453270781727216,
@@ -189,15 +181,6 @@
 								}
 							],
 							"actions": [
-								{
-									"id": "set-position-to-another-object",
-									"objectClass": "SPlayer",
-									"sid": 301947141979668,
-									"parameters": {
-										"object": "SSpawnPlayer",
-										"image-point-optional": "0"
-									}
-								},
 								{
 									"id": "set-instvar-value",
 									"objectClass": "SPlayer",

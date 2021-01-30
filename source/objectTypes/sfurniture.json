@@ -3,14 +3,7 @@
 	"plugin-id": "Sprite",
 	"sid": 706407320695298,
 	"isGlobal": false,
-	"instanceVariables": [
-		{
-			"name": "isZsort",
-			"type": "boolean",
-			"desc": "true - sort, false - lay to back",
-			"sid": 801572602661233
-		}
-	],
+	"instanceVariables": [],
 	"behaviorTypes": [
 		{
 			"behaviorId": "solid",
@@ -288,8 +281,8 @@
 					{
 						"width": 21,
 						"height": 22,
-						"originX": 0.7380952380952381,
-						"originY": -1.2045454545454546,
+						"originX": 0.5,
+						"originY": 0.5,
 						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-furniture.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,

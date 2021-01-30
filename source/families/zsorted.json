@@ -8,6 +8,12 @@
 			"type": "number",
 			"desc": "",
 			"sid": 499578165920836
+		},
+		{
+			"name": "ZSorting",
+			"type": "boolean",
+			"desc": "",
+			"sid": 811892893146373
 		}
 	],
 	"behaviorTypes": [],
