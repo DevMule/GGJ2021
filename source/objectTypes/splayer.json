@@ -17,6 +17,12 @@
 			"sid": 175150184747596
 		},
 		{
+			"name": "score",
+			"type": "number",
+			"desc": "",
+			"sid": 849621683103786
+		},
+		{
 			"name": "need_1",
 			"type": "number",
 			"desc": "",

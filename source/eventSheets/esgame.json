@@ -153,6 +153,25 @@
 						},
 						{
 							"type": "comment",
+							"text": "sync player points"
+						},
+						{
+							"id": "sync-instance-variable",
+							"objectClass": "Multiplayer",
+							"sid": 711443868674591,
+							"parameters": {
+								"object": "SPlayer",
+								"instance-variable": {
+									"name": "score",
+									"objectClass": "SPlayer"
+								},
+								"precision": "normal-float-4-bytes",
+								"interpolation": "none",
+								"client-value-tag": "\"\""
+							}
+						},
+						{
+							"type": "comment",
 							"text": "sync player inventory"
 						},
 						{
@@ -533,6 +552,11 @@
 								"x": "SPlayer.X",
 								"y": "SPlayer.Y - 35"
 							}
+						},
+						{
+							"id": "move-to-top",
+							"objectClass": "SFoundIndicator",
+							"sid": 728059959495530
 						}
 					],
 					"sid": 620879475521712,
@@ -1175,19 +1199,59 @@
 					"functionCategory": "game",
 					"functionReturnType": "none",
 					"functionIsAsync": true,
-					"functionParameters": [
-						{
-							"name": "steal_index",
-							"type": "number",
-							"initialValue": "0",
-							"comment": "",
-							"sid": 861870360889395
-						}
-					],
+					"functionParameters": [],
 					"eventType": "function-block",
 					"conditions": [],
 					"actions": [],
-					"sid": 268330395531256
+					"sid": 268330395531256,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-host",
+									"objectClass": "Multiplayer",
+									"sid": 198297246126348
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "onStealItem",
+									"sid": 798003340601918,
+									"parameters": [
+										"Multiplayer.MyID",
+										"STEAL_PID"
+									]
+								}
+							],
+							"sid": 903421927093977
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-host",
+									"objectClass": "Multiplayer",
+									"sid": 335575797737988,
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "send-message",
+									"objectClass": "Multiplayer",
+									"sid": 601288025360929,
+									"parameters": {
+										"peer-id": "Multiplayer.HostID",
+										"tag": "\"stealItem\"",
+										"message": "STEAL_PID",
+										"mode": "reliable-ordered"
+									}
+								}
+							],
+							"sid": 181495003086818
+						}
+					]
 				}
 			],
 			"sid": 346060190745918
@@ -1967,6 +2031,641 @@
 										}
 									],
 									"sid": 442421476056936
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "stealing items"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-peer-message",
+							"objectClass": "Multiplayer",
+							"sid": 120143480390442,
+							"parameters": {
+								"tag": "\"stealItem\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "onStealItem",
+							"sid": 916150771465468,
+							"parameters": [
+								"Multiplayer.FromID",
+								"Multiplayer.Message"
+							]
+						}
+					],
+					"sid": 823463613140636
+				},
+				{
+					"functionName": "onStealItem",
+					"functionDescription": "",
+					"functionCategory": "game",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "stealer_pid",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 308483545236399
+						},
+						{
+							"name": "victim_pid",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 948933532823052
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 124922058698122,
+					"children": [
+						{
+							"eventType": "variable",
+							"name": "stealer_empty_index",
+							"type": "number",
+							"initialValue": "-1",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 676301801363868
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "SPlayer",
+									"sid": 306780498015968,
+									"parameters": {
+										"instance-variable": "pid",
+										"comparison": 0,
+										"value": "stealer_pid"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "SPlayer",
+									"sid": 930592490824303,
+									"parameters": {
+										"instance-variable": "pick_1",
+										"comparison": 2,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 884813108164045,
+									"parameters": {
+										"variable": "stealer_empty_index",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 981230989479849
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 546511660280521,
+									"parameters": {
+										"variable": "stealer_empty_index",
+										"comparison": 2,
+										"value": "0"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "SPlayer",
+									"sid": 845171526862234,
+									"parameters": {
+										"instance-variable": "pid",
+										"comparison": 0,
+										"value": "stealer_pid"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "SPlayer",
+									"sid": 781763650871372,
+									"parameters": {
+										"instance-variable": "pick_2",
+										"comparison": 2,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 235589603003914,
+									"parameters": {
+										"variable": "stealer_empty_index",
+										"value": "2"
+									}
+								}
+							],
+							"sid": 270398341314421
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 664470820151772,
+									"parameters": {
+										"variable": "stealer_empty_index",
+										"comparison": 2,
+										"value": "0"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "SPlayer",
+									"sid": 863836615911048,
+									"parameters": {
+										"instance-variable": "pid",
+										"comparison": 0,
+										"value": "stealer_pid"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "SPlayer",
+									"sid": 256996348584663,
+									"parameters": {
+										"instance-variable": "pick_3",
+										"comparison": 2,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 785030292903556,
+									"parameters": {
+										"variable": "stealer_empty_index",
+										"value": "3"
+									}
+								}
+							],
+							"sid": 569135666054211
+						},
+						{
+							"eventType": "variable",
+							"name": "victim_steal_index",
+							"type": "number",
+							"initialValue": "-1",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 245495744621046
+						},
+						{
+							"eventType": "variable",
+							"name": "steal_type",
+							"type": "number",
+							"initialValue": "-1",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 868289198057438
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "SPlayer",
+									"sid": 463452469434517,
+									"parameters": {
+										"instance-variable": "pid",
+										"comparison": 0,
+										"value": "victim_pid"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "SPlayer",
+									"sid": 387800107659881,
+									"parameters": {
+										"instance-variable": "pick_1",
+										"comparison": 5,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 614636219416976,
+									"parameters": {
+										"variable": "victim_steal_index",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 105735562777300,
+									"parameters": {
+										"variable": "steal_type",
+										"value": "SPlayer.pick_1"
+									}
+								}
+							],
+							"sid": 989034972461373
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 528313301198124,
+									"parameters": {
+										"variable": "victim_steal_index",
+										"comparison": 2,
+										"value": "0"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "SPlayer",
+									"sid": 895616029541794,
+									"parameters": {
+										"instance-variable": "pid",
+										"comparison": 0,
+										"value": "victim_pid"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "SPlayer",
+									"sid": 908346914429659,
+									"parameters": {
+										"instance-variable": "pick_2",
+										"comparison": 5,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 695588606214961,
+									"parameters": {
+										"variable": "victim_steal_index",
+										"value": "2"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 909791738798902,
+									"parameters": {
+										"variable": "steal_type",
+										"value": "SPlayer.pick_2"
+									}
+								}
+							],
+							"sid": 523493447444307
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 396551005862604,
+									"parameters": {
+										"variable": "victim_steal_index",
+										"comparison": 2,
+										"value": "0"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "SPlayer",
+									"sid": 424839290215005,
+									"parameters": {
+										"instance-variable": "pid",
+										"comparison": 0,
+										"value": "victim_pid"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "SPlayer",
+									"sid": 144418682991460,
+									"parameters": {
+										"instance-variable": "pick_3",
+										"comparison": 5,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 636625403961558,
+									"parameters": {
+										"variable": "victim_steal_index",
+										"value": "3"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 783593868642185,
+									"parameters": {
+										"variable": "steal_type",
+										"value": "SPlayer.pick_3"
+									}
+								}
+							],
+							"sid": 768700349414903
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 768771400705940,
+									"parameters": {
+										"variable": "victim_steal_index",
+										"comparison": 5,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 444085023116806,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 127690007397227,
+											"parameters": {
+												"variable": "stealer_empty_index",
+												"comparison": 5,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 781750014280642,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "SPlayer",
+													"sid": 998667301530471,
+													"parameters": {
+														"instance-variable": "pid",
+														"comparison": 0,
+														"value": "stealer_pid"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 261943405267817,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 845225495575873,
+															"parameters": {
+																"variable": "stealer_empty_index",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "SPlayer",
+															"sid": 979027364653442,
+															"parameters": {
+																"instance-variable": "pick_1",
+																"value": "steal_type"
+															}
+														}
+													],
+													"sid": 872171201450061
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 849915557519947,
+															"parameters": {
+																"variable": "stealer_empty_index",
+																"comparison": 0,
+																"value": "2"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "SPlayer",
+															"sid": 555883729101421,
+															"parameters": {
+																"instance-variable": "pick_2",
+																"value": "steal_type"
+															}
+														}
+													],
+													"sid": 766341459431691
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 337564621129925,
+															"parameters": {
+																"variable": "stealer_empty_index",
+																"comparison": 0,
+																"value": "3"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "SPlayer",
+															"sid": 863314170340635,
+															"parameters": {
+																"instance-variable": "pick_3",
+																"value": "steal_type"
+															}
+														}
+													],
+													"sid": 431256853665506
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "SPlayer",
+													"sid": 424191960637906,
+													"parameters": {
+														"instance-variable": "pid",
+														"comparison": 0,
+														"value": "victim_pid"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 115971776412365,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 747180709808297,
+															"parameters": {
+																"variable": "victim_steal_index",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "SPlayer",
+															"sid": 964391008950063,
+															"parameters": {
+																"instance-variable": "pick_1",
+																"value": "-1"
+															}
+														}
+													],
+													"sid": 930250686399434
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 590984383123507,
+															"parameters": {
+																"variable": "victim_steal_index",
+																"comparison": 0,
+																"value": "2"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "SPlayer",
+															"sid": 523143174887440,
+															"parameters": {
+																"instance-variable": "pick_2",
+																"value": "-1"
+															}
+														}
+													],
+													"sid": 687354373764918
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 810525100189977,
+															"parameters": {
+																"variable": "victim_steal_index",
+																"comparison": 0,
+																"value": "3"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "SPlayer",
+															"sid": 373227635667005,
+															"parameters": {
+																"instance-variable": "pick_3",
+																"value": "-1"
+															}
+														}
+													],
+													"sid": 569909692646988
+												}
+											]
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 144471833427125
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "onDropItem",
+											"sid": 684107535532297,
+											"parameters": [
+												"victim_steal_index",
+												"victim_pid"
+											]
+										}
+									],
+									"sid": 191275295939802
 								}
 							]
 						}

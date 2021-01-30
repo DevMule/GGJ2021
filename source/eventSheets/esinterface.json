@@ -795,6 +795,36 @@
 					"sid": 384105696436075
 				}
 			]
+		},
+		{
+			"eventType": "comment",
+			"text": "score"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SPlayer",
+					"sid": 992823175892292,
+					"parameters": {
+						"instance-variable": "pid",
+						"comparison": 0,
+						"value": "Multiplayer.MyID"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "SFScore",
+					"sid": 723213657263069,
+					"parameters": {
+						"text": "round(SPlayer.score)"
+					}
+				}
+			],
+			"sid": 119105033266184
 		}
 	],
 	"sid": 226744073968533

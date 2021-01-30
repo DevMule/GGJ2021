@@ -12,6 +12,16 @@
 			"sid": 426671789974246
 		},
 		{
+			"eventType": "variable",
+			"name": "STEAL_PID",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 794330428329671
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "controller keyboard",
@@ -381,6 +391,215 @@
 				}
 			],
 			"sid": 190266923991597
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "STEALING",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 412882629227997
+						}
+					],
+					"actions": [],
+					"sid": 923844301555945,
+					"children": [
+						{
+							"eventType": "variable",
+							"name": "nearest_distance",
+							"type": "number",
+							"initialValue": "9999",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 250018962488428
+						},
+						{
+							"eventType": "variable",
+							"name": "from_x",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 580127414371664
+						},
+						{
+							"eventType": "variable",
+							"name": "from_y",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 158829885208583
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "SPlayer",
+									"sid": 702148019042016,
+									"parameters": {
+										"instance-variable": "pid",
+										"comparison": 0,
+										"value": "Multiplayer.MyID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 574599270561058,
+									"parameters": {
+										"variable": "from_x",
+										"value": "SPlayer.X"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 680243618979976,
+									"parameters": {
+										"variable": "from_y",
+										"value": "SPlayer.Y"
+									}
+								}
+							],
+							"sid": 715232859837847
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 218610625035819,
+									"parameters": {
+										"object": "SPlayer"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "SPlayer",
+									"sid": 107194302544219,
+									"parameters": {
+										"instance-variable": "pid",
+										"comparison": 1,
+										"value": "Multiplayer.MyID"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 774956683797229,
+							"children": [
+								{
+									"eventType": "variable",
+									"name": "distance_to_current",
+									"type": "number",
+									"initialValue": "9999",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 942523295678137
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 993843992061104,
+											"parameters": {
+												"variable": "distance_to_current",
+												"value": "distance(from_x, from_y, SPlayer.X, SPlayer.Y)"
+											}
+										}
+									],
+									"sid": 762044730725260,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 974504159173175,
+													"parameters": {
+														"first-value": "distance_to_current",
+														"comparison": 2,
+														"second-value": "25"
+													}
+												},
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 591264893879817,
+													"parameters": {
+														"first-value": "distance_to_current",
+														"comparison": 2,
+														"second-value": "nearest_distance"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 803612884244839,
+													"parameters": {
+														"variable": "STEAL_PID",
+														"value": "SPlayer.pid"
+													}
+												}
+											],
+											"sid": 254041955462261
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 734536906962691,
+											"parameters": {
+												"first-value": "distance_to_current",
+												"comparison": 5,
+												"second-value": "25"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 953336782516096,
+											"parameters": {
+												"variable": "STEAL_PID",
+												"value": "\"\""
+											}
+										}
+									],
+									"sid": 730267693121752
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 197173860300631
 		}
 	],
 	"sid": 880939369443232

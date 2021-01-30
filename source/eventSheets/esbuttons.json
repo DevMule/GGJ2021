@@ -321,6 +321,71 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "compare-animation-frame",
+					"objectClass": "SBtn",
+					"sid": 834202662090824,
+					"parameters": {
+						"comparison": 0,
+						"number": "3"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 419859213326103,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 363767822864470,
+							"parameters": {
+								"variable": "STEAL_PID",
+								"comparison": 0,
+								"value": "\"\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "SBtn",
+							"sid": 708924017631343,
+							"parameters": {
+								"opacity": "25"
+							}
+						}
+					],
+					"sid": 800084720534203
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 334807371329564
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "SBtn",
+							"sid": 284102012776489,
+							"parameters": {
+								"opacity": "100"
+							}
+						}
+					],
+					"sid": 200754154485097
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-tap-object",
 					"objectClass": "Touch",
 					"sid": 599241475279193,
@@ -464,9 +529,25 @@
 								"comparison": 0,
 								"number": "3"
 							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 414078539071396,
+							"parameters": {
+								"variable": "STEAL_PID",
+								"comparison": 0,
+								"value": "\"\""
+							},
+							"isInverted": true
 						}
 					],
-					"actions": [],
+					"actions": [
+						{
+							"callFunction": "stealItem",
+							"sid": 834063402496329
+						}
+					],
 					"sid": 403217399232071
 				}
 			]

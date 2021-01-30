@@ -155,7 +155,8 @@
 			"Touch",
 			"SBtn",
 			"TStatic",
-			"SFoundIndicator"
+			"TLeaderboard",
+			"SFScore"
 		],
 		"subfolders": [
 			{
@@ -183,7 +184,8 @@
 					"SDropIndicator",
 					"SUIStatic",
 					"SUIInventoryFrame",
-					"SFgameStatus"
+					"SFgameStatus",
+					"SFoundIndicator"
 				],
 				"subfolders": [],
 				"name": "game"

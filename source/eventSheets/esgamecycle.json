@@ -22,6 +22,28 @@
 			"sid": 884284406643561
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 247440763947444
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 156392794715542,
+					"parameters": {
+						"layer": "\"leaderboard\"",
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 750750501196092
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "TIMER",
@@ -112,6 +134,125 @@
 								}
 							],
 							"sid": 827263845115744
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-host",
+									"objectClass": "Multiplayer",
+									"sid": 849011272158845
+								}
+							],
+							"actions": [],
+							"sid": 720596160078208,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 611698959263421,
+											"parameters": {
+												"object": "SPlayer"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 300013070036793,
+											"parameters": {
+												"first-value": "SPlayer.need_1",
+												"comparison": 0,
+												"second-value": "SPlayer.pick_1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-instvar",
+											"objectClass": "SPlayer",
+											"sid": 967385213444757,
+											"parameters": {
+												"instance-variable": "score",
+												"value": "dt"
+											}
+										}
+									],
+									"sid": 404942355420748
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 861009649640409,
+											"parameters": {
+												"object": "SPlayer"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 182731515012423,
+											"parameters": {
+												"first-value": "SPlayer.need_2",
+												"comparison": 0,
+												"second-value": "SPlayer.pick_2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-instvar",
+											"objectClass": "SPlayer",
+											"sid": 175684819580058,
+											"parameters": {
+												"instance-variable": "score",
+												"value": "dt"
+											}
+										}
+									],
+									"sid": 822918091359571
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 487482091813126,
+											"parameters": {
+												"object": "SPlayer"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 869370645609239,
+											"parameters": {
+												"first-value": "SPlayer.need_3",
+												"comparison": 0,
+												"second-value": "SPlayer.pick_3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-instvar",
+											"objectClass": "SPlayer",
+											"sid": 524279922696957,
+											"parameters": {
+												"instance-variable": "score",
+												"value": "dt"
+											}
+										}
+									],
+									"sid": 922076894292789
+								}
+							]
 						}
 					]
 				},
@@ -186,6 +327,15 @@
 							"parameters": {
 								"variable": "IS_GAME_LOOP",
 								"value": "true"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 788069312643672,
+							"parameters": {
+								"layer": "\"leaderboard\"",
+								"visibility": "invisible"
 							}
 						}
 					],
@@ -300,6 +450,15 @@
 											"parameters": {
 												"instance-variable": "pick_3",
 												"value": "-1"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SPlayer",
+											"sid": 312711390457699,
+											"parameters": {
+												"instance-variable": "score",
+												"value": "0"
 											}
 										}
 									],
@@ -482,6 +641,15 @@
 											"parameters": {
 												"instance-variable": "need_3",
 												"value": "-1"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SPlayer",
+											"sid": 174687473738012,
+											"parameters": {
+												"instance-variable": "score",
+												"value": "0"
 											}
 										}
 									],
