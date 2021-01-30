@@ -1,0 +1,137 @@
+{
+	"name": "SFoundIndicator",
+	"plugin-id": "Sprite",
+	"sid": 909020104941711,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 13,
+						"height": 5,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-walk-animation.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9480411,
+						"collisionPoly": {
+							"points": [
+								0.6923076923076923,
+								1,
+								1,
+								1,
+								1,
+								1,
+								1,
+								1,
+								0.9230769230769231,
+								1,
+								0.9230769230769231,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 13,
+						"height": 5,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-walk-animation.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1091554,
+						"collisionPoly": {
+							"points": [
+								0.6923076923076923,
+								1,
+								1,
+								1,
+								1,
+								1,
+								1,
+								1,
+								0.9230769230769231,
+								1,
+								0.9230769230769231,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 13,
+						"height": 5,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-walk-animation.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 558252,
+						"collisionPoly": {
+							"points": [
+								0.6923076923076923,
+								1,
+								1,
+								1,
+								1,
+								1,
+								1,
+								1,
+								0.9230769230769231,
+								1,
+								0.9230769230769231,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 13,
+						"height": 5,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-walk-animation.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8184057,
+						"collisionPoly": {
+							"points": [
+								0.6923076923076923,
+								1,
+								1,
+								1,
+								1,
+								1,
+								1,
+								1,
+								0.9230769230769231,
+								1,
+								0.9230769230769231,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 396558041152033,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

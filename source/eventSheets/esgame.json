@@ -524,6 +524,15 @@
 								"object": "SPlayer",
 								"image-point-optional": "0"
 							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "SFoundIndicator",
+							"sid": 837406901810470,
+							"parameters": {
+								"x": "SPlayer.X",
+								"y": "SPlayer.Y - 35"
+							}
 						}
 					],
 					"sid": 620879475521712,
@@ -768,6 +777,112 @@
 								}
 							],
 							"sid": 711092118967716
+						},
+						{
+							"eventType": "variable",
+							"name": "collected_count",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 966515625287642
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 932621748948375,
+									"parameters": {
+										"first-value": "SPlayer.need_1",
+										"comparison": 0,
+										"second-value": "SPlayer.pick_1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 240303463003961,
+									"parameters": {
+										"variable": "collected_count",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 440997004687360
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 750515528011409,
+									"parameters": {
+										"first-value": "SPlayer.need_2",
+										"comparison": 0,
+										"second-value": "SPlayer.pick_2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 525544115671908,
+									"parameters": {
+										"variable": "collected_count",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 603376091110236
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 837000100794612,
+									"parameters": {
+										"first-value": "SPlayer.need_3",
+										"comparison": 0,
+										"second-value": "SPlayer.pick_3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 923759258137683,
+									"parameters": {
+										"variable": "collected_count",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 112492927280617
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "SFoundIndicator",
+									"sid": 444758337892938,
+									"parameters": {
+										"frame-number": "collected_count"
+									}
+								}
+							],
+							"sid": 197544781770686
 						}
 					]
 				},

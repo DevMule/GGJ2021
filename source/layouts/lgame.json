@@ -7506,6 +7506,35 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "SFoundIndicator",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 1,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 314,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 11,
+						"y": -65,
+						"width": 13,
+						"height": 5,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 393679230237060,
@@ -12745,16 +12774,16 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 199.5,
+						"x": 59,
 						"y": 9,
-						"width": 393,
+						"width": 112,
 						"height": 16,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
-							1,
-							1,
-							1,
+							0.10196078431372549,
+							0.10588235294117647,
+							0.12549019607843137,
 							1
 						],
 						"angle": 0,

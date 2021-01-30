@@ -154,7 +154,8 @@
 			"Keyboard",
 			"Touch",
 			"SBtn",
-			"TStatic"
+			"TStatic",
+			"SFoundIndicator"
 		],
 		"subfolders": [
 			{
@@ -193,6 +194,7 @@
 	"containers": [
 		{
 			"members": [
+				"SFoundIndicator",
 				"SPlayer",
 				"SPlayerVis"
 			],
