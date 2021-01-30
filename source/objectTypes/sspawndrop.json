@@ -1,16 +1,9 @@
 {
-	"name": "SDropIndicator",
+	"name": "SSpawnDrop",
 	"plugin-id": "Sprite",
-	"sid": 645748202629707,
+	"sid": 446147071639673,
 	"isGlobal": false,
-	"instanceVariables": [
-		{
-			"name": "drop_index",
-			"type": "number",
-			"desc": "",
-			"sid": 207486135731556
-		}
-	],
+	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
@@ -25,12 +18,12 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 8307235,
+						"imageSpriteId": 9259664,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 175283752888871,
+				"sid": 711355665648221,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

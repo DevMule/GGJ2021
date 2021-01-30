@@ -1,0 +1,21 @@
+{
+	"name": "TMFloor",
+	"plugin-id": "Tilemap",
+	"sid": 908121366964738,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 32,
+		"height": 32,
+		"originX": 3.03125,
+		"originY": 1.53125,
+		"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-walls.png",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 505210,
+		"useCollisionPoly": true
+	},
+	"tile-collision-polys": {}
+}

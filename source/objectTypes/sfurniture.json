@@ -1,0 +1,324 @@
+{
+	"name": "SFurniture",
+	"plugin-id": "Sprite",
+	"sid": 706407320695298,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "isZsort",
+			"type": "boolean",
+			"desc": "true - sort, false - lay to back",
+			"sid": 801572602661233
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 308206924015548
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 66,
+						"height": 34,
+						"originX": 0.5,
+						"originY": 0.6764705882352942,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-furniture.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 920839,
+						"collisionPoly": {
+							"points": [
+								0.9393939393939399,
+								0.4485294117647061,
+								0.9659090909090906,
+								0.8455882352941176,
+								0.06250000000000004,
+								0.9595588235294118,
+								0.043560606060606064,
+								0.5000000000000009
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 32,
+						"height": 40,
+						"originX": 0.375,
+						"originY": 0.825,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-furniture.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5323386,
+						"collisionPoly": {
+							"points": [
+								0.08203125,
+								0.6937500000000001,
+								0.66796875,
+								0.6500000000000002,
+								0.7421875,
+								0.9468750000000004,
+								0.14453125,
+								0.971875
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 33,
+						"height": 35,
+						"originX": 0.5151515151515151,
+						"originY": 0.7428571428571429,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-furniture.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9466401,
+						"collisionPoly": {
+							"points": [
+								0.7537878787878788,
+								0.5607142857142855,
+								0.8712121212121213,
+								0.6749999999999999,
+								0.303030303030303,
+								0.9642857142857143,
+								0.12878787878787876,
+								0.8321428571428576
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 13,
+						"height": 17,
+						"originX": 0.6153846153846154,
+						"originY": 0.5294117647058824,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-furniture.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9075937,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 35,
+						"height": 46,
+						"originX": 0.4,
+						"originY": 0.717391304347826,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-furniture.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7150287,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.638586956521739,
+								1,
+								0.6521739130434788,
+								0.38571428571428545,
+								0.970108695652174
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 37,
+						"height": 33,
+						"originX": 0.4864864864864865,
+						"originY": 0.7272727272727273,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-furniture.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6479213,
+						"collisionPoly": {
+							"points": [
+								0.179054054054054,
+								0.5416666666666666,
+								0.945945945945946,
+								0.5984848484848484,
+								0.8344594594594592,
+								0.9090909090909092,
+								0.09121621621621623,
+								0.8446969696969698
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 14,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.875,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-furniture.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4980168,
+						"collisionPoly": {
+							"points": [
+								0.23214285714285707,
+								0.77734375,
+								0.7857142857142858,
+								0.80859375,
+								0.7321428571428572,
+								0.9453125,
+								0.17857142857142855,
+								0.94140625
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 20,
+						"height": 18,
+						"originX": 0.5,
+						"originY": 0.7777777777777778,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-furniture.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8024773,
+						"collisionPoly": {
+							"points": [
+								0.11874999999999994,
+								0.5347222222222224,
+								0.8437500000000001,
+								0.5833333333333335,
+								0.8625000000000002,
+								0.9166666666666669,
+								0.1,
+								0.9027777777777781
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 11,
+						"height": 11,
+						"originX": 0.5454545454545454,
+						"originY": 0.7272727272727273,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-furniture.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5558736,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 23,
+						"height": 25,
+						"originX": 0.5217391304347826,
+						"originY": 0.76,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-furniture.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2162490,
+						"collisionPoly": {
+							"points": [
+								0.3913043478260868,
+								0.5050000000000001,
+								0.9456521739130432,
+								0.7400000000000002,
+								0.5108695652173911,
+								0.9249999999999999,
+								0.043478260869565244,
+								0.7150000000000001
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 46,
+						"height": 18,
+						"originX": 0.4782608695652174,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-furniture.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8030943,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 22,
+						"height": 18,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-furniture.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1676726,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 32,
+						"height": 26,
+						"originX": 0.5,
+						"originY": 0.5384615384615384,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-furniture.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1873525,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 23,
+						"height": 15,
+						"originX": 0.5217391304347826,
+						"originY": 0.5333333333333333,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-furniture.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1991331,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 21,
+						"height": 22,
+						"originX": 0.7380952380952381,
+						"originY": -1.2045454545454546,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-furniture.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7075298,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 12,
+						"height": 15,
+						"originX": 0.5,
+						"originY": 0.5333333333333333,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-furniture.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6314557,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 767547105635018,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

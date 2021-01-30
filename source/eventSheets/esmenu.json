@@ -2,6 +2,10 @@
 	"name": "ESMenu",
 	"events": [
 		{
+			"eventType": "include",
+			"includeSheet": "ESMaster"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{

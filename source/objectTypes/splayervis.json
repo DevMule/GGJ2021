@@ -1,0 +1,762 @@
+{
+	"name": "SPlayerVis",
+	"plugin-id": "Sprite",
+	"sid": 454662667266386,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 19,
+						"height": 34,
+						"originX": 0.47368421052631576,
+						"originY": 0.9117647058823529,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-char-idle.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2415075,
+						"collisionPoly": {
+							"points": [
+								0.10526315789473684,
+								0.2647058823529412,
+								0.5,
+								0.029411764705882353,
+								0.6842105263157895,
+								0.35294117647058826,
+								0.7368421052631579,
+								0.4852941176470588,
+								0.7368421052631579,
+								0.6176470588235294,
+								0.5,
+								0.9411764705882353,
+								0.10526315789473684,
+								0.6764705882352942,
+								0.15789473684210525,
+								0.4852941176470588
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 895570788661224,
+				"name": "idle",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 20,
+						"height": 34,
+						"originX": 0.5,
+						"originY": 0.9117647058823529,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-walk-animation.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7141766,
+						"collisionPoly": {
+							"points": [
+								0.15,
+								0.29411764705882354,
+								1,
+								0.38235294117647056,
+								1,
+								0.5147058823529411,
+								1,
+								0.6470588235294118,
+								0.3,
+								0.6176470588235294,
+								0.3,
+								0.5147058823529411
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 20,
+						"height": 34,
+						"originX": 0.5,
+						"originY": 0.9117647058823529,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-walk-animation.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8391930,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.29411764705882354,
+								1,
+								0.38235294117647056,
+								1,
+								0.5147058823529411,
+								1,
+								0.6470588235294118,
+								0,
+								0.6176470588235294,
+								0,
+								0.5147058823529411
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 19,
+						"height": 34,
+						"originX": 0.5263157894736842,
+						"originY": 0.9117647058823529,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-walk-animation.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6148920,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.29411764705882354,
+								1,
+								0.38235294117647056,
+								1,
+								0.5147058823529411,
+								1,
+								0.6470588235294118,
+								0,
+								0.6176470588235294,
+								0,
+								0.5147058823529411
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 19,
+						"height": 34,
+						"originX": 0.5263157894736842,
+						"originY": 0.9117647058823529,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-walk-animation.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7430088,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.29411764705882354,
+								1,
+								0.38235294117647056,
+								1,
+								0.5147058823529411,
+								1,
+								0.6470588235294118,
+								0,
+								0.6176470588235294,
+								0,
+								0.5147058823529411
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 19,
+						"height": 34,
+						"originX": 0.5263157894736842,
+						"originY": 0.9117647058823529,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-walk-animation.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8380999,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.29411764705882354,
+								1,
+								0.38235294117647056,
+								1,
+								0.5147058823529411,
+								1,
+								0.6470588235294118,
+								0,
+								0.6176470588235294,
+								0,
+								0.5147058823529411
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 19,
+						"height": 34,
+						"originX": 0.5263157894736842,
+						"originY": 0.9117647058823529,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-walk-animation.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6277522,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.29411764705882354,
+								1,
+								0.38235294117647056,
+								1,
+								0.5147058823529411,
+								1,
+								0.6470588235294118,
+								0,
+								0.6176470588235294,
+								0,
+								0.5147058823529411
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 19,
+						"height": 34,
+						"originX": 0.5263157894736842,
+						"originY": 0.9117647058823529,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-walk-animation.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4094677,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.29411764705882354,
+								1,
+								0.38235294117647056,
+								1,
+								0.5147058823529411,
+								1,
+								0.6470588235294118,
+								0,
+								0.6176470588235294,
+								0,
+								0.5147058823529411
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 19,
+						"height": 34,
+						"originX": 0.5263157894736842,
+						"originY": 0.9117647058823529,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-walk-animation.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3409874,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.29411764705882354,
+								0.7368421052631579,
+								0.38235294117647056,
+								0.7368421052631579,
+								0.5147058823529411,
+								0.7894736842105263,
+								0.6470588235294118,
+								0,
+								0.6176470588235294,
+								0,
+								0.5147058823529411
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 483553133609274,
+				"name": "side",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 15
+			},
+			{
+				"frames": [
+					{
+						"width": 19,
+						"height": 34,
+						"originX": 0.47368421052631576,
+						"originY": 0.9117647058823529,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-walk-up-animation.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8282696,
+						"collisionPoly": {
+							"points": [
+								0.2631578947368421,
+								0.35294117647058826,
+								1,
+								0.2647058823529412,
+								1,
+								0.5147058823529411,
+								1,
+								0.7058823529411765,
+								0.15789473684210525,
+								0.7058823529411765,
+								0.21052631578947367,
+								0.5147058823529411
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 19,
+						"height": 34,
+						"originX": 0.47368421052631576,
+						"originY": 0.9117647058823529,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-walk-up-animation.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8750768,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.35294117647058826,
+								1,
+								0.2647058823529412,
+								1,
+								0.5147058823529411,
+								1,
+								0.7058823529411765,
+								0,
+								0.7058823529411765,
+								0,
+								0.5147058823529411
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 19,
+						"height": 34,
+						"originX": 0.47368421052631576,
+						"originY": 0.9117647058823529,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-walk-up-animation.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1051957,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.35294117647058826,
+								1,
+								0.2647058823529412,
+								1,
+								0.5147058823529411,
+								1,
+								0.7058823529411765,
+								0,
+								0.7058823529411765,
+								0,
+								0.5147058823529411
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 19,
+						"height": 34,
+						"originX": 0.47368421052631576,
+						"originY": 0.9117647058823529,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-walk-up-animation.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8908865,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.35294117647058826,
+								1,
+								0.2647058823529412,
+								1,
+								0.5147058823529411,
+								1,
+								0.7058823529411765,
+								0,
+								0.7058823529411765,
+								0,
+								0.5147058823529411
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 19,
+						"height": 34,
+						"originX": 0.47368421052631576,
+						"originY": 0.9117647058823529,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-walk-up-animation.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4430858,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.35294117647058826,
+								1,
+								0.2647058823529412,
+								1,
+								0.5147058823529411,
+								1,
+								0.7058823529411765,
+								0,
+								0.7058823529411765,
+								0,
+								0.5147058823529411
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 19,
+						"height": 34,
+						"originX": 0.47368421052631576,
+						"originY": 0.9117647058823529,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-walk-up-animation.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7049831,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.35294117647058826,
+								1,
+								0.2647058823529412,
+								1,
+								0.5147058823529411,
+								1,
+								0.7058823529411765,
+								0,
+								0.7058823529411765,
+								0,
+								0.5147058823529411
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 19,
+						"height": 34,
+						"originX": 0.47368421052631576,
+						"originY": 0.9117647058823529,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-walk-up-animation.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8625124,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.35294117647058826,
+								1,
+								0.2647058823529412,
+								1,
+								0.5147058823529411,
+								1,
+								0.7058823529411765,
+								0,
+								0.7058823529411765,
+								0,
+								0.5147058823529411
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 19,
+						"height": 34,
+						"originX": 0.47368421052631576,
+						"originY": 0.9117647058823529,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-walk-up-animation.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 933920,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.35294117647058826,
+								0.9473684210526315,
+								0.2647058823529412,
+								0.8421052631578947,
+								0.5147058823529411,
+								0.8947368421052632,
+								0.7058823529411765,
+								0,
+								0.7058823529411765,
+								0,
+								0.5147058823529411
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 490688026380341,
+				"name": "up",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 15
+			},
+			{
+				"frames": [
+					{
+						"width": 20,
+						"height": 35,
+						"originX": 0.45,
+						"originY": 0.9142857142857143,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-walk-down-animation.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5879480,
+						"collisionPoly": {
+							"points": [
+								0.15,
+								0.3142857142857143,
+								1,
+								0.2571428571428571,
+								1,
+								0.5285714285714286,
+								1,
+								0.7142857142857143,
+								0.15,
+								0.7142857142857143,
+								0.25,
+								0.5285714285714286
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 20,
+						"height": 36,
+						"originX": 0.45,
+						"originY": 0.8888888888888888,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-walk-down-animation.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 826221,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.3055555555555556,
+								1,
+								0.25,
+								1,
+								0.5138888888888888,
+								1,
+								0.6944444444444444,
+								0,
+								0.6944444444444444,
+								0,
+								0.5138888888888888
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 20,
+						"height": 35,
+						"originX": 0.45,
+						"originY": 0.9142857142857143,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-walk-down-animation.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5147191,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.3142857142857143,
+								1,
+								0.2571428571428571,
+								1,
+								0.5285714285714286,
+								1,
+								0.7142857142857143,
+								0,
+								0.7142857142857143,
+								0,
+								0.5285714285714286
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 20,
+						"height": 35,
+						"originX": 0.45,
+						"originY": 0.9142857142857143,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-walk-down-animation.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7140425,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.3142857142857143,
+								1,
+								0.2571428571428571,
+								1,
+								0.5285714285714286,
+								1,
+								0.7142857142857143,
+								0,
+								0.7142857142857143,
+								0,
+								0.5285714285714286
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 20,
+						"height": 35,
+						"originX": 0.45,
+						"originY": 0.9142857142857143,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-walk-down-animation.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3805865,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.3142857142857143,
+								1,
+								0.2571428571428571,
+								1,
+								0.5285714285714286,
+								1,
+								0.7142857142857143,
+								0,
+								0.7142857142857143,
+								0,
+								0.5285714285714286
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 20,
+						"height": 36,
+						"originX": 0.45,
+						"originY": 0.8888888888888888,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-walk-down-animation.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3576135,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.3055555555555556,
+								1,
+								0.25,
+								1,
+								0.5138888888888888,
+								1,
+								0.6944444444444444,
+								0,
+								0.6944444444444444,
+								0,
+								0.5138888888888888
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 20,
+						"height": 35,
+						"originX": 0.45,
+						"originY": 0.9142857142857143,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-walk-down-animation.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4777329,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.3142857142857143,
+								1,
+								0.2571428571428571,
+								1,
+								0.5285714285714286,
+								1,
+								0.7142857142857143,
+								0,
+								0.7142857142857143,
+								0,
+								0.5285714285714286
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 20,
+						"height": 35,
+						"originX": 0.45,
+						"originY": 0.9142857142857143,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-walk-down-animation.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6199090,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.3142857142857143,
+								0.95,
+								0.2571428571428571,
+								0.8,
+								0.5285714285714286,
+								0.85,
+								0.7142857142857143,
+								0,
+								0.7142857142857143,
+								0,
+								0.5285714285714286
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 260094903279869,
+				"name": "down",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 15
+			}
+		],
+		"subfolders": []
+	}
+}

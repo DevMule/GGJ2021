@@ -16,6 +16,14 @@
 			"includeSheet": "ESController"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "ESGameCycle"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "ESMaster"
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "SIGNALLING",
@@ -65,6 +73,22 @@
 							"id": "destroy",
 							"objectClass": "SDrop",
 							"sid": 867299596951900
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "SSpawnDrop",
+							"sid": 589315587310234,
+							"parameters": {
+								"opacity": "0"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "SSpawnPlayer",
+							"sid": 660949092600743,
+							"parameters": {
+								"opacity": "0"
+							}
 						},
 						{
 							"type": "comment",
@@ -331,6 +355,33 @@
 							"sid": 668024584881798
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "SPlayer",
+							"sid": 139815366100697,
+							"parameters": {
+								"instance-variable": "pid",
+								"comparison": 0,
+								"value": "Multiplayer.MyID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "SLight",
+							"sid": 368140583782090,
+							"parameters": {
+								"object": "SPlayer",
+								"image-point-optional": "0"
+							}
+						}
+					],
+					"sid": 568319701448146
 				}
 			],
 			"sid": 712625897891187
@@ -664,43 +715,69 @@
 					"functionParameters": [],
 					"eventType": "function-block",
 					"conditions": [],
-					"actions": [
+					"actions": [],
+					"sid": 129004775653742,
+					"children": [
 						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 765915966940549,
-							"parameters": {
-								"variable": "LAST_DROP_UID",
-								"value": "1"
-							}
-						},
-						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 340625474997532,
-							"parameters": {
-								"object-to-create": "SDrop",
-								"layer": "\"game\"",
-								"x": "random(500)",
-								"y": "random(500)"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "SDrop",
-							"sid": 808416130610382,
-							"parameters": {
-								"instance-variable": "drop_uid",
-								"value": "LAST_DROP_UID"
-							}
-						},
-						{
-							"id": "move-to-bottom",
-							"objectClass": "SDrop",
-							"sid": 948419675984760
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-random-instance",
+									"objectClass": "System",
+									"sid": 180068457825128,
+									"parameters": {
+										"object": "SSpawnDrop"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 572655331989392,
+									"parameters": {
+										"variable": "LAST_DROP_UID",
+										"value": "1"
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 248309295739217,
+									"parameters": {
+										"object-to-create": "SDrop",
+										"layer": "\"game\"",
+										"x": "SSpawnDrop.X",
+										"y": "SSpawnDrop.Y"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "SDrop",
+									"sid": 670005308567765,
+									"parameters": {
+										"instance-variable": "drop_uid",
+										"value": "LAST_DROP_UID"
+									}
+								},
+								{
+									"id": "move-to-bottom",
+									"objectClass": "SDrop",
+									"sid": 501131795835096
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "SDrop",
+									"sid": 187804647316599,
+									"parameters": {
+										"instance-variable": "drop_type",
+										"value": "random(JSONSettings.Get(\"game.itemTypes\"))"
+									}
+								}
+							],
+							"sid": 522561552145699
 						}
-					],
-					"sid": 129004775653742
+					]
 				},
 				{
 					"eventType": "comment",
@@ -1195,65 +1272,82 @@
 					],
 					"eventType": "function-block",
 					"conditions": [],
-					"actions": [
-						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 340135325529352,
-							"parameters": {
-								"object-to-create": "SPlayer",
-								"layer": "\"game\"",
-								"x": "random(500)",
-								"y": "random(500)"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "SPlayer",
-							"sid": 157746126143781,
-							"parameters": {
-								"instance-variable": "pid",
-								"value": "pid"
-							}
-						},
-						{
-							"id": "associate-object-with-peer",
-							"objectClass": "Multiplayer",
-							"sid": 926496755287565,
-							"parameters": {
-								"object": "SPlayer",
-								"peer-id": "pid"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 103285177800917,
 					"children": [
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-instance-variable",
-									"objectClass": "SPlayer",
-									"sid": 125546552893458,
+									"id": "pick-random-instance",
+									"objectClass": "System",
+									"sid": 879240497149576,
 									"parameters": {
-										"instance-variable": "pid",
-										"comparison": 0,
-										"value": "Multiplayer.MyID"
+										"object": "SSpawnPlayer"
 									}
 								}
 							],
 							"actions": [
 								{
-									"id": "set-enabled",
-									"objectClass": "SPlayer",
-									"sid": 144776655191269,
-									"behaviorType": "ScrollTo",
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 371912062931507,
 									"parameters": {
-										"state": "enabled"
+										"object-to-create": "SPlayer",
+										"layer": "\"game\"",
+										"x": "SSpawnPlayer.X",
+										"y": "SSpawnPlayer.Y"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "SPlayer",
+									"sid": 258607875552854,
+									"parameters": {
+										"instance-variable": "pid",
+										"value": "pid"
+									}
+								},
+								{
+									"id": "associate-object-with-peer",
+									"objectClass": "Multiplayer",
+									"sid": 185693563591985,
+									"parameters": {
+										"object": "SPlayer",
+										"peer-id": "pid"
 									}
 								}
 							],
-							"sid": 928212228811670
+							"sid": 437239701457527,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "SPlayer",
+											"sid": 164254073663157,
+											"parameters": {
+												"instance-variable": "pid",
+												"comparison": 0,
+												"value": "Multiplayer.MyID"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-enabled",
+											"objectClass": "SPlayer",
+											"sid": 600982651356128,
+											"behaviorType": "ScrollTo",
+											"parameters": {
+												"state": "enabled"
+											}
+										}
+									],
+									"sid": 872668873273430
+								}
+							]
 						}
 					]
 				},

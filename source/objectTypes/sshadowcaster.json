@@ -1,36 +1,35 @@
 {
-	"name": "SDropIndicator",
+	"name": "SShadowCaster",
 	"plugin-id": "Sprite",
-	"sid": 645748202629707,
+	"sid": 306819361314299,
 	"isGlobal": false,
-	"instanceVariables": [
+	"instanceVariables": [],
+	"behaviorTypes": [
 		{
-			"name": "drop_index",
-			"type": "number",
-			"desc": "",
-			"sid": 207486135731556
+			"behaviorId": "shadowcaster",
+			"name": "ShadowCaster",
+			"sid": 308784010920505
 		}
 	],
-	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 32,
-						"height": 32,
+						"width": 2,
+						"height": 2,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 8307235,
+						"imageSpriteId": 5804674,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 175283752888871,
+				"sid": 716593761297311,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

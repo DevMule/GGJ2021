@@ -1,0 +1,462 @@
+{
+	"name": "ESGameCycle",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "IS_GAME_LOOP",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 253604682005448
+		},
+		{
+			"eventType": "variable",
+			"name": "loop_time",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 884284406643561
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "TIMER",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 878883168252005,
+							"parameters": {
+								"variable": "IS_GAME_LOOP"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 641106787313193,
+							"parameters": {
+								"variable": "loop_time",
+								"value": "dt"
+							}
+						}
+					],
+					"sid": 645918402930633,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-host",
+									"objectClass": "Multiplayer",
+									"sid": 459876619367282
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 521224695367822,
+									"parameters": {
+										"first-value": "loop_time",
+										"comparison": 3,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "endTimer",
+									"sid": 642110474664281
+								}
+							],
+							"sid": 226996724711124
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 552236323467581,
+							"parameters": {
+								"variable": "IS_GAME_LOOP"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 922785093670590
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-peer-message",
+							"objectClass": "Multiplayer",
+							"sid": 759850521287964,
+							"parameters": {
+								"tag": "\"beginTimer\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "beginTimer",
+							"sid": 380647219554580
+						}
+					],
+					"sid": 692896471892044
+				},
+				{
+					"functionName": "beginTimer",
+					"functionDescription": "",
+					"functionCategory": "game cycle",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 648888569557067,
+							"parameters": {
+								"variable": "IS_GAME_LOOP",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 533892444908288,
+							"parameters": {
+								"variable": "loop_time",
+								"value": "JSONSettings.Get(\"game.roundTime\")"
+							}
+						}
+					],
+					"sid": 557686684107888,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-host",
+									"objectClass": "Multiplayer",
+									"sid": 334775349530815
+								}
+							],
+							"actions": [
+								{
+									"id": "broadcast-message",
+									"objectClass": "Multiplayer",
+									"sid": 560189896531419,
+									"parameters": {
+										"from-id": "Multiplayer.HostID",
+										"tag": "\"beginTimer\"",
+										"message": "\"\"",
+										"mode": "reliable-ordered"
+									}
+								}
+							],
+							"sid": 698393698627649,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 873492298697739,
+											"parameters": {
+												"object": "SPlayer"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SPlayer",
+											"sid": 918767149094249,
+											"parameters": {
+												"instance-variable": "pick_1",
+												"value": "-1"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SPlayer",
+											"sid": 791450917950842,
+											"parameters": {
+												"instance-variable": "pick_2",
+												"value": "-1"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SPlayer",
+											"sid": 296354952110143,
+											"parameters": {
+												"instance-variable": "pick_3",
+												"value": "-1"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SPlayer",
+											"sid": 996913162996041,
+											"parameters": {
+												"instance-variable": "need_1",
+												"value": "random(JSONSettings.Get(\"game.itemTypes\"))"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SPlayer",
+											"sid": 444513131033120,
+											"parameters": {
+												"instance-variable": "need_2",
+												"value": "random(JSONSettings.Get(\"game.itemTypes\"))"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SPlayer",
+											"sid": 499415185664274,
+											"parameters": {
+												"instance-variable": "need_3",
+												"value": "random(JSONSettings.Get(\"game.itemTypes\"))"
+											}
+										}
+									],
+									"sid": 912023968322530
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-random-instance",
+											"objectClass": "System",
+											"sid": 155582193860105,
+											"parameters": {
+												"object": "SSpawnPlayer"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position-to-another-object",
+											"objectClass": "SPlayer",
+											"sid": 741578179437609,
+											"parameters": {
+												"object": "SSpawnPlayer",
+												"image-point-optional": "0"
+											}
+										}
+									],
+									"sid": 627574600487867
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-peer-message",
+							"objectClass": "Multiplayer",
+							"sid": 222543966266056,
+							"parameters": {
+								"tag": "\"endTimer\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "comment",
+							"text": "todo получить рассчёты наград"
+						},
+						{
+							"callFunction": "endTimer",
+							"sid": 981635141995421
+						}
+					],
+					"sid": 826612876937267
+				},
+				{
+					"functionName": "endTimer",
+					"functionDescription": "",
+					"functionCategory": "game cycle",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 248570443315063,
+							"parameters": {
+								"variable": "IS_GAME_LOOP",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 707394070623150,
+							"parameters": {
+								"variable": "loop_time",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 634833461876276,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-host",
+									"objectClass": "Multiplayer",
+									"sid": 376389988360242
+								}
+							],
+							"actions": [
+								{
+									"id": "broadcast-message",
+									"objectClass": "Multiplayer",
+									"sid": 663466402193985,
+									"parameters": {
+										"from-id": "Multiplayer.HostID",
+										"tag": "\"endTimer\"",
+										"message": "\"\"",
+										"mode": "reliable-ordered"
+									}
+								},
+								{
+									"type": "comment",
+									"text": "todo сделать рассчёты наград, отправить их"
+								}
+							],
+							"sid": 634568743927536,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "очистить всё"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 534165883297812,
+											"parameters": {
+												"object": "SDrop"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "SDrop",
+											"sid": 114502965418976
+										}
+									],
+									"sid": 188541388180691
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 359118188834629,
+											"parameters": {
+												"object": "SPlayer"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SPlayer",
+											"sid": 432051966365625,
+											"parameters": {
+												"instance-variable": "pick_1",
+												"value": "-1"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SPlayer",
+											"sid": 248859572834009,
+											"parameters": {
+												"instance-variable": "pick_2",
+												"value": "-1"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SPlayer",
+											"sid": 223535943150765,
+											"parameters": {
+												"instance-variable": "pick_3",
+												"value": "-1"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SPlayer",
+											"sid": 302971478788471,
+											"parameters": {
+												"instance-variable": "need_1",
+												"value": "-1"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SPlayer",
+											"sid": 385873614721941,
+											"parameters": {
+												"instance-variable": "need_2",
+												"value": "-1"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SPlayer",
+											"sid": 830291486629640,
+											"parameters": {
+												"instance-variable": "need_3",
+												"value": "-1"
+											}
+										}
+									],
+									"sid": 615209837654893
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 386057384558933
+		}
+	],
+	"sid": 507380997762675
+}

@@ -56,6 +56,14 @@
 		},
 		{
 			"type": "plugin",
+			"id": "shadowlight",
+			"name": "Shadow light",
+			"author": "Scirra",
+			"version": "r225",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Multiplayer",
 			"name": "Multiplayer",
 			"author": "Scirra",
@@ -109,6 +117,22 @@
 			"author": "Scirra",
 			"version": "r225",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"version": "r225",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "shadowcaster",
+			"name": "Shadow caster",
+			"author": "Scirra",
+			"version": "r225",
+			"bundled": false
 		}
 	],
 	"uniqueId": "386fi2mjm3p",
@@ -146,7 +170,14 @@
 					"SPlayer",
 					"JSONPlayer",
 					"SDrop",
-					"TMWalls"
+					"TMWalls",
+					"SFurniture",
+					"TMFloor",
+					"SLight",
+					"SShadowCaster",
+					"SSpawnPlayer",
+					"SSpawnDrop",
+					"SPlayerVis"
 				],
 				"subfolders": [
 					{
@@ -162,7 +193,15 @@
 		]
 	},
 	"autosaveData": null,
-	"containers": [],
+	"containers": [
+		{
+			"members": [
+				"SPlayer",
+				"SPlayerVis"
+			],
+			"selectMode": "normal"
+		}
+	],
 	"families": {
 		"items": [],
 		"subfolders": []
@@ -181,7 +220,8 @@
 			"ESMultiplayer",
 			"ESMaster",
 			"ESMenu",
-			"ESController"
+			"ESController",
+			"ESGameCycle"
 		],
 		"subfolders": []
 	},
