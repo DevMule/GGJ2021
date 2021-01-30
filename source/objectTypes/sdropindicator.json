@@ -32,26 +32,6 @@
 						"exportFormat": "png",
 						"exportQuality": 0.8,
 						"imageSpriteId": 2424463,
-						"collisionPoly": {
-							"points": [
-								0,
-								0,
-								1,
-								0,
-								1,
-								0.6622222222222223,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								0.7285714285714286,
-								1
-							]
-						},
 						"useCollisionPoly": true,
 						"duration": 1
 					},
@@ -64,26 +44,6 @@
 						"exportFormat": "png",
 						"exportQuality": 0.8,
 						"imageSpriteId": 2164527,
-						"collisionPoly": {
-							"points": [
-								0.25333333333333335,
-								0,
-								1,
-								0,
-								1,
-								0.6622222222222223,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1
-							]
-						},
 						"useCollisionPoly": true,
 						"duration": 1
 					},
@@ -96,26 +56,6 @@
 						"exportFormat": "png",
 						"exportQuality": 0.8,
 						"imageSpriteId": 6884936,
-						"collisionPoly": {
-							"points": [
-								0,
-								0,
-								1,
-								0,
-								1,
-								0.6622222222222223,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								0,
-								1,
-								0,
-								1
-							]
-						},
 						"useCollisionPoly": true,
 						"duration": 1
 					},
@@ -128,26 +68,6 @@
 						"exportFormat": "png",
 						"exportQuality": 0.8,
 						"imageSpriteId": 8241622,
-						"collisionPoly": {
-							"points": [
-								0,
-								0,
-								1,
-								0,
-								1,
-								0.6600000000000001,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								0,
-								1,
-								0,
-								1
-							]
-						},
 						"useCollisionPoly": true,
 						"duration": 1
 					},
@@ -160,26 +80,6 @@
 						"exportFormat": "png",
 						"exportQuality": 0.8,
 						"imageSpriteId": 7683399,
-						"collisionPoly": {
-							"points": [
-								0,
-								0.30666666666666664,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								0,
-								1,
-								0,
-								1
-							]
-						},
 						"useCollisionPoly": true,
 						"duration": 1
 					},
@@ -192,26 +92,6 @@
 						"exportFormat": "png",
 						"exportQuality": 0.8,
 						"imageSpriteId": 5268367,
-						"collisionPoly": {
-							"points": [
-								0,
-								0.2514285714285714,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								0,
-								1,
-								0,
-								1
-							]
-						},
 						"useCollisionPoly": true,
 						"duration": 1
 					},
@@ -224,58 +104,6 @@
 						"exportFormat": "png",
 						"exportQuality": 0.8,
 						"imageSpriteId": 4691800,
-						"collisionPoly": {
-							"points": [
-								0,
-								0.3247058823529412,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								0,
-								1,
-								0,
-								1
-							]
-						},
-						"useCollisionPoly": true,
-						"duration": 1
-					},
-					{
-						"width": 15,
-						"height": 16,
-						"originX": 0.5,
-						"originY": 0.5,
-						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-ui-icons.png",
-						"exportFormat": "png",
-						"exportQuality": 0.8,
-						"imageSpriteId": 1961910,
-						"collisionPoly": {
-							"points": [
-								0,
-								0,
-								1,
-								0,
-								1,
-								0,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								0.7466666666666668,
-								1
-							]
-						},
 						"useCollisionPoly": true,
 						"duration": 1
 					},
@@ -288,26 +116,6 @@
 						"exportFormat": "png",
 						"exportQuality": 0.8,
 						"imageSpriteId": 3396233,
-						"collisionPoly": {
-							"points": [
-								0,
-								0,
-								1,
-								0,
-								1,
-								0,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								0,
-								1,
-								0,
-								1
-							]
-						},
 						"useCollisionPoly": true,
 						"duration": 1
 					},
@@ -320,26 +128,6 @@
 						"exportFormat": "png",
 						"exportQuality": 0.8,
 						"imageSpriteId": 3980398,
-						"collisionPoly": {
-							"points": [
-								0,
-								0,
-								1,
-								0,
-								1,
-								0.7085714285714287,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								0,
-								1,
-								0,
-								1
-							]
-						},
 						"useCollisionPoly": true,
 						"duration": 1
 					},
@@ -352,26 +140,6 @@
 						"exportFormat": "png",
 						"exportQuality": 0.8,
 						"imageSpriteId": 7985463,
-						"collisionPoly": {
-							"points": [
-								0,
-								0,
-								1,
-								0,
-								1,
-								0,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								0,
-								1,
-								0,
-								1
-							]
-						},
 						"useCollisionPoly": true,
 						"duration": 1
 					},
@@ -384,26 +152,18 @@
 						"exportFormat": "png",
 						"exportQuality": 0.8,
 						"imageSpriteId": 3200957,
-						"collisionPoly": {
-							"points": [
-								0.2333333333333334,
-								0,
-								1,
-								0,
-								1,
-								0,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1,
-								1
-							]
-						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 15,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-ui-icons.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1961910,
 						"useCollisionPoly": true,
 						"duration": 1
 					}

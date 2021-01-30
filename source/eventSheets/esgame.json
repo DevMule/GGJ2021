@@ -1106,6 +1106,15 @@
 									"parameters": {
 										"object": "SSpawnDrop"
 									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "SSpawnDrop",
+									"sid": 567977179126845,
+									"parameters": {
+										"object": "SDrop"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [

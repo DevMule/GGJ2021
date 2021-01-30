@@ -87,6 +87,31 @@
 								}
 							],
 							"sid": 226996724711124
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-host",
+									"objectClass": "Multiplayer",
+									"sid": 745609778258020
+								},
+								{
+									"id": "every-x-seconds",
+									"objectClass": "System",
+									"sid": 665751293333095,
+									"parameters": {
+										"interval-seconds": "JSONSettings.Get(\"game.dropRespawnTime\")"
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "createDrop",
+									"sid": 636686034941817
+								}
+							],
+							"sid": 827263845115744
 						}
 					]
 				},
@@ -258,6 +283,26 @@
 										"message": "\"\"",
 										"mode": "reliable-ordered"
 									}
+								},
+								{
+									"callFunction": "createDrop",
+									"sid": 169282340288119
+								},
+								{
+									"callFunction": "createDrop",
+									"sid": 982725840970923
+								},
+								{
+									"callFunction": "createDrop",
+									"sid": 939787259959559
+								},
+								{
+									"callFunction": "createDrop",
+									"sid": 673775428767759
+								},
+								{
+									"callFunction": "createDrop",
+									"sid": 117102610926779
 								}
 							],
 							"sid": 698393698627649
