@@ -24,14 +24,6 @@
 		},
 		{
 			"type": "plugin",
-			"id": "Text",
-			"name": "Text",
-			"author": "Scirra",
-			"version": "r225",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
@@ -96,6 +88,14 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"version": "r225",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Keyboard",
 			"name": "Keyboard",
 			"author": "Scirra",
@@ -153,8 +153,8 @@
 			"TError",
 			"Keyboard",
 			"Touch",
-			"SFStatic",
-			"SBtn"
+			"SBtn",
+			"TStatic"
 		],
 		"subfolders": [
 			{
@@ -165,14 +165,6 @@
 				],
 				"subfolders": [],
 				"name": "menu"
-			},
-			{
-				"items": [
-					"TPeerCount",
-					"BtnBeginGame"
-				],
-				"subfolders": [],
-				"name": "lobby"
 			},
 			{
 				"items": [
@@ -257,6 +249,11 @@
 					"name": "VT323-Regular.ttf",
 					"type": "application/font-sfnt",
 					"sid": 975487997770912
+				},
+				{
+					"name": "Hardpixel.ttf",
+					"type": "application/font-sfnt",
+					"sid": 121314257184527
 				}
 			],
 			"subfolders": []

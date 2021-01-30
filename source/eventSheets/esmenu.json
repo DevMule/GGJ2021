@@ -9,6 +9,109 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 256673180155888
+				}
+			],
+			"actions": [
+				{
+					"id": "set-css-style",
+					"objectClass": "BtnConnectRoom",
+					"sid": 362143457496266,
+					"parameters": {
+						"property-name": "\"border\"",
+						"value": "\"0\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "InputNick",
+					"sid": 184281313982672,
+					"parameters": {
+						"property-name": "\"border\"",
+						"value": "\"0\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "InputNick",
+					"sid": 747560382515740,
+					"parameters": {
+						"property-name": "\"background\"",
+						"value": "\"transparent\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "InputRoomId",
+					"sid": 431902919040857,
+					"parameters": {
+						"property-name": "\"border\"",
+						"value": "\"0\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "InputRoomId",
+					"sid": 266588489908547,
+					"parameters": {
+						"property-name": "\"background\"",
+						"value": "\"transparent\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "BtnConnectRoom",
+					"sid": 993668922230909,
+					"parameters": {
+						"property-name": "\"font-family\"",
+						"value": "\"Hardpixel\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "InputNick",
+					"sid": 861600063817548,
+					"parameters": {
+						"property-name": "\"font-family\"",
+						"value": "\"Hardpixel\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "InputRoomId",
+					"sid": 447903987439644,
+					"parameters": {
+						"property-name": "\"font-family\"",
+						"value": "\"Hardpixel \""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "BtnConnectRoom",
+					"sid": 691986815433621,
+					"parameters": {
+						"property-name": "\"color\"",
+						"value": "\"#ffffff\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "BtnConnectRoom",
+					"sid": 799922701369767,
+					"parameters": {
+						"property-name": "\"background-color\"",
+						"value": "\"#1a1b20\""
+					}
+				}
+			],
+			"sid": 252939229164710
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-clicked",
 					"objectClass": "BtnConnectRoom",
 					"sid": 493995729420807
