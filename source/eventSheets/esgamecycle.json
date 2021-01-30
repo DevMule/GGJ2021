@@ -195,78 +195,6 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-instance-variable",
-									"objectClass": "SPlayer",
-									"sid": 453270781727216,
-									"parameters": {
-										"instance-variable": "pid",
-										"comparison": 0,
-										"value": "Multiplayer.MyID"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-instvar-value",
-									"objectClass": "SPlayer",
-									"sid": 185669159702073,
-									"parameters": {
-										"instance-variable": "need_1",
-										"value": "floor(random(JSONSettings.Get(\"game.itemTypes\")))"
-									}
-								},
-								{
-									"id": "set-instvar-value",
-									"objectClass": "SPlayer",
-									"sid": 212438261661027,
-									"parameters": {
-										"instance-variable": "need_2",
-										"value": "floor(random(JSONSettings.Get(\"game.itemTypes\")))"
-									}
-								},
-								{
-									"id": "set-instvar-value",
-									"objectClass": "SPlayer",
-									"sid": 180315970586134,
-									"parameters": {
-										"instance-variable": "need_3",
-										"value": "floor(random(JSONSettings.Get(\"game.itemTypes\")))"
-									}
-								},
-								{
-									"id": "set-instvar-value",
-									"objectClass": "SPlayer",
-									"sid": 918767149094249,
-									"parameters": {
-										"instance-variable": "pick_1",
-										"value": "-1"
-									}
-								},
-								{
-									"id": "set-instvar-value",
-									"objectClass": "SPlayer",
-									"sid": 791450917950842,
-									"parameters": {
-										"instance-variable": "pick_2",
-										"value": "-1"
-									}
-								},
-								{
-									"id": "set-instvar-value",
-									"objectClass": "SPlayer",
-									"sid": 296354952110143,
-									"parameters": {
-										"instance-variable": "pick_3",
-										"value": "-1"
-									}
-								}
-							],
-							"sid": 182034741753304
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
 									"id": "is-host",
 									"objectClass": "Multiplayer",
 									"sid": 334775349530815
@@ -305,7 +233,79 @@
 									"sid": 117102610926779
 								}
 							],
-							"sid": 698393698627649
+							"sid": 698393698627649,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 498801102243854,
+											"parameters": {
+												"object": "SPlayer"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SPlayer",
+											"sid": 120958256744886,
+											"parameters": {
+												"instance-variable": "need_1",
+												"value": "floor(random(JSONSettings.Get(\"game.itemTypes\")))"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SPlayer",
+											"sid": 591631182205001,
+											"parameters": {
+												"instance-variable": "need_2",
+												"value": "floor(random(JSONSettings.Get(\"game.itemTypes\")))"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SPlayer",
+											"sid": 109611923188771,
+											"parameters": {
+												"instance-variable": "need_3",
+												"value": "floor(random(JSONSettings.Get(\"game.itemTypes\")))"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SPlayer",
+											"sid": 364533400696222,
+											"parameters": {
+												"instance-variable": "pick_1",
+												"value": "-1"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SPlayer",
+											"sid": 177601132334865,
+											"parameters": {
+												"instance-variable": "pick_2",
+												"value": "-1"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SPlayer",
+											"sid": 498735474838018,
+											"parameters": {
+												"instance-variable": "pick_3",
+												"value": "-1"
+											}
+										}
+									],
+									"sid": 276797484958860
+								}
+							]
 						}
 					]
 				},
@@ -434,7 +434,8 @@
 									}
 								}
 							],
-							"sid": 721914901259173
+							"sid": 721914901259173,
+							"disabled": true
 						},
 						{
 							"eventType": "block",
@@ -488,6 +489,76 @@
 										}
 									],
 									"sid": 188541388180691
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 254665151821513,
+											"parameters": {
+												"object": "SPlayer"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SPlayer",
+											"sid": 146112652316843,
+											"parameters": {
+												"instance-variable": "pick_1",
+												"value": "-1"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SPlayer",
+											"sid": 664434067994322,
+											"parameters": {
+												"instance-variable": "pick_2",
+												"value": "-1"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SPlayer",
+											"sid": 208923896209328,
+											"parameters": {
+												"instance-variable": "pick_3",
+												"value": "-1"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SPlayer",
+											"sid": 941416334532878,
+											"parameters": {
+												"instance-variable": "need_1",
+												"value": "-1"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SPlayer",
+											"sid": 733455898090195,
+											"parameters": {
+												"instance-variable": "need_2",
+												"value": "-1"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SPlayer",
+											"sid": 666631669205424,
+											"parameters": {
+												"instance-variable": "need_3",
+												"value": "-1"
+											}
+										}
+									],
+									"sid": 945481696037687
 								}
 							]
 						}

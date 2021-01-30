@@ -158,7 +158,7 @@
 						{
 							"id": "sync-instance-variable",
 							"objectClass": "Multiplayer",
-							"sid": 675750813406771,
+							"sid": 970987318826968,
 							"parameters": {
 								"object": "SPlayer",
 								"instance-variable": {
@@ -167,13 +167,13 @@
 								},
 								"precision": "low-int16-2-bytes",
 								"interpolation": "none",
-								"client-value-tag": "\"need_1\""
+								"client-value-tag": "\"\""
 							}
 						},
 						{
 							"id": "sync-instance-variable",
 							"objectClass": "Multiplayer",
-							"sid": 842999265483720,
+							"sid": 116278369144851,
 							"parameters": {
 								"object": "SPlayer",
 								"instance-variable": {
@@ -182,13 +182,13 @@
 								},
 								"precision": "low-int16-2-bytes",
 								"interpolation": "none",
-								"client-value-tag": "\"need_2\""
+								"client-value-tag": "\"\""
 							}
 						},
 						{
 							"id": "sync-instance-variable",
 							"objectClass": "Multiplayer",
-							"sid": 529618629739918,
+							"sid": 414806872611845,
 							"parameters": {
 								"object": "SPlayer",
 								"instance-variable": {
@@ -197,13 +197,13 @@
 								},
 								"precision": "low-int16-2-bytes",
 								"interpolation": "none",
-								"client-value-tag": "\"need_3\""
+								"client-value-tag": "\"\""
 							}
 						},
 						{
 							"id": "sync-instance-variable",
 							"objectClass": "Multiplayer",
-							"sid": 677613034702938,
+							"sid": 449518527731141,
 							"parameters": {
 								"object": "SPlayer",
 								"instance-variable": {
@@ -212,13 +212,13 @@
 								},
 								"precision": "low-int16-2-bytes",
 								"interpolation": "none",
-								"client-value-tag": "\"pick_1\""
+								"client-value-tag": "\"\""
 							}
 						},
 						{
 							"id": "sync-instance-variable",
 							"objectClass": "Multiplayer",
-							"sid": 591270345541588,
+							"sid": 957952770107902,
 							"parameters": {
 								"object": "SPlayer",
 								"instance-variable": {
@@ -227,13 +227,13 @@
 								},
 								"precision": "low-int16-2-bytes",
 								"interpolation": "none",
-								"client-value-tag": "\"pick_2\""
+								"client-value-tag": "\"\""
 							}
 						},
 						{
 							"id": "sync-instance-variable",
 							"objectClass": "Multiplayer",
-							"sid": 409952923274132,
+							"sid": 535636286258644,
 							"parameters": {
 								"object": "SPlayer",
 								"instance-variable": {
@@ -242,7 +242,7 @@
 								},
 								"precision": "low-int16-2-bytes",
 								"interpolation": "none",
-								"client-value-tag": "\"pick_3\""
+								"client-value-tag": "\"\""
 							}
 						},
 						{
@@ -1155,10 +1155,10 @@
 								{
 									"id": "set-instvar-value",
 									"objectClass": "SDrop",
-									"sid": 187804647316599,
+									"sid": 644867642872259,
 									"parameters": {
 										"instance-variable": "drop_type",
-										"value": "random(JSONSettings.Get(\"game.itemTypes\"))"
+										"value": "floor(random(JSONSettings.Get(\"game.itemTypes\")))"
 									}
 								}
 							],
@@ -1520,8 +1520,191 @@
 							"sid": 742345945587826,
 							"children": [
 								{
+									"eventType": "variable",
+									"name": "is_picked",
+									"type": "boolean",
+									"initialValue": "false",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 494616768410902
+								},
+								{
+									"eventType": "comment",
+									"text": "сначала проверить наличие пустого поля такого типа"
+								},
+								{
 									"eventType": "block",
 									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "SPlayer",
+											"sid": 810245009313204,
+											"parameters": {
+												"instance-variable": "pick_1",
+												"comparison": 2,
+												"value": "0"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "SPlayer",
+											"sid": 798624896718589,
+											"parameters": {
+												"instance-variable": "need_1",
+												"comparison": 0,
+												"value": "SDrop.drop_type"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SPlayer",
+											"sid": 914312673132163,
+											"parameters": {
+												"instance-variable": "pick_1",
+												"value": "SDrop.drop_type"
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 423264398981331,
+											"parameters": {
+												"variable": "is_picked",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 731368797762107
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 354262624295682,
+											"parameters": {
+												"variable": "is_picked"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "SPlayer",
+											"sid": 125447446509978,
+											"parameters": {
+												"instance-variable": "pick_2",
+												"comparison": 2,
+												"value": "0"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "SPlayer",
+											"sid": 275157752288034,
+											"parameters": {
+												"instance-variable": "need_2",
+												"comparison": 0,
+												"value": "SDrop.drop_type"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SPlayer",
+											"sid": 931040803752023,
+											"parameters": {
+												"instance-variable": "pick_2",
+												"value": "SDrop.drop_type"
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 937506754402425,
+											"parameters": {
+												"variable": "is_picked",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 552840401960217
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 439124245085479,
+											"parameters": {
+												"variable": "is_picked"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "SPlayer",
+											"sid": 737158962223909,
+											"parameters": {
+												"instance-variable": "pick_3",
+												"comparison": 2,
+												"value": "0"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "SPlayer",
+											"sid": 930389743648523,
+											"parameters": {
+												"instance-variable": "need_3",
+												"comparison": 0,
+												"value": "SDrop.drop_type"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SPlayer",
+											"sid": 645010490065473,
+											"parameters": {
+												"instance-variable": "pick_3",
+												"value": "SDrop.drop_type"
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 942313299736986,
+											"parameters": {
+												"variable": "is_picked",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 772020695027158
+								},
+								{
+									"eventType": "comment",
+									"text": "если поля такого же типа нет, то ставим в первое пустое поле"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 494715473825417,
+											"parameters": {
+												"variable": "is_picked"
+											},
+											"isInverted": true
+										},
 										{
 											"id": "compare-instance-variable",
 											"objectClass": "SPlayer",
@@ -1542,6 +1725,15 @@
 												"instance-variable": "pick_1",
 												"value": "SDrop.drop_type"
 											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 892158386121276,
+											"parameters": {
+												"variable": "is_picked",
+												"value": "true"
+											}
 										}
 									],
 									"sid": 900434415323646
@@ -1550,9 +1742,13 @@
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "else",
+											"id": "compare-boolean-eventvar",
 											"objectClass": "System",
-											"sid": 676505118318915
+											"sid": 609699596491876,
+											"parameters": {
+												"variable": "is_picked"
+											},
+											"isInverted": true
 										},
 										{
 											"id": "compare-instance-variable",
@@ -1574,6 +1770,15 @@
 												"instance-variable": "pick_2",
 												"value": "SDrop.drop_type"
 											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 500171892509414,
+											"parameters": {
+												"variable": "is_picked",
+												"value": "true"
+											}
 										}
 									],
 									"sid": 437768456737073
@@ -1582,9 +1787,13 @@
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "else",
+											"id": "compare-boolean-eventvar",
 											"objectClass": "System",
-											"sid": 329622433743175
+											"sid": 287312335082719,
+											"parameters": {
+												"variable": "is_picked"
+											},
+											"isInverted": true
 										},
 										{
 											"id": "compare-instance-variable",
@@ -1606,13 +1815,35 @@
 												"instance-variable": "pick_3",
 												"value": "SDrop.drop_type"
 											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 712414161305467,
+											"parameters": {
+												"variable": "is_picked",
+												"value": "true"
+											}
 										}
 									],
 									"sid": 936161394499277
 								},
 								{
+									"eventType": "comment",
+									"text": "если поставили тип, то удаляем"
+								},
+								{
 									"eventType": "block",
-									"conditions": [],
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 678204852138672,
+											"parameters": {
+												"variable": "is_picked"
+											}
+										}
+									],
 									"actions": [
 										{
 											"id": "destroy",

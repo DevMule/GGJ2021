@@ -82,6 +82,141 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 502913370749761,
+					"parameters": {
+						"variable": "IS_GAME_LOOP"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 818906850585681,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "SBtn",
+							"sid": 397282318706965,
+							"parameters": {
+								"comparison": 0,
+								"number": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "SBtn",
+							"sid": 800999423796688,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 788977010386317
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "SBtn",
+							"sid": 617375794278418,
+							"parameters": {
+								"comparison": 0,
+								"number": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "SBtn",
+							"sid": 489181983368771,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 614898908222613
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 143734694820952,
+					"parameters": {
+						"variable": "IS_GAME_LOOP"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [],
+			"sid": 341208015425170,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "SBtn",
+							"sid": 344374494457500,
+							"parameters": {
+								"comparison": 0,
+								"number": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "SBtn",
+							"sid": 724007862173941,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 820044290070024
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "SBtn",
+							"sid": 882054309837851,
+							"parameters": {
+								"comparison": 0,
+								"number": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "SBtn",
+							"sid": 263912403129137,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 948443595135681
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "is-host",
 					"objectClass": "Multiplayer",
 					"sid": 143489300496030,
@@ -108,6 +243,79 @@
 				}
 			],
 			"sid": 672378192160440
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-animation-frame",
+					"objectClass": "SBtn",
+					"sid": 564657873939101,
+					"parameters": {
+						"comparison": 0,
+						"number": "2"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 985216282306201,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "SPlayer",
+							"sid": 703201769306884,
+							"parameters": {
+								"instance-variable": "pid",
+								"comparison": 0,
+								"value": "Multiplayer.MyID"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "SPlayer",
+							"sid": 334545806996952,
+							"parameters": {
+								"object": "SDrop"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "SBtn",
+							"sid": 376009697452926,
+							"parameters": {
+								"opacity": "100"
+							}
+						}
+					],
+					"sid": 928260099211263
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 208000696796624
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "SBtn",
+							"sid": 113371832838953,
+							"parameters": {
+								"opacity": "25"
+							}
+						}
+					],
+					"sid": 262378139848973
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -202,6 +410,64 @@
 							"sid": 983925551453837
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "SBtn",
+							"sid": 164734708540227,
+							"parameters": {
+								"comparison": 0,
+								"number": "2"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "SPlayer",
+							"sid": 723815917445387,
+							"parameters": {
+								"instance-variable": "pid",
+								"comparison": 0,
+								"value": "Multiplayer.MyID"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "SPlayer",
+							"sid": 731697344132642,
+							"parameters": {
+								"object": "SDrop"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "pickUpItem",
+							"sid": 850086963265684,
+							"parameters": [
+								"SDrop.drop_uid"
+							]
+						}
+					],
+					"sid": 803925352520865
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "SBtn",
+							"sid": 405386690217967,
+							"parameters": {
+								"comparison": 0,
+								"number": "3"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 403217399232071
 				}
 			]
 		}
