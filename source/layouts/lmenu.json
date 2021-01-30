@@ -36,48 +36,6 @@
 					}
 				},
 				{
-					"type": "TStatic",
-					"properties": {
-						"text": "room-id",
-						"enable-bbcode": true,
-						"font": "VT323-Regular",
-						"size": 25,
-						"line-height": 0,
-						"bold": true,
-						"italic": false,
-						"color": [
-							0,
-							0,
-							0,
-							1
-						],
-						"horizontal-alignment": "center",
-						"vertical-alignment": "top",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "top-left"
-					},
-					"uid": 9,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 153.67466827278315,
-						"y": 120.22840590868736,
-						"width": 153.33684360854642,
-						"height": 47.36308581339648,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "InputRoomId",
 					"properties": {
 						"text": "",
@@ -142,41 +100,75 @@
 					}
 				},
 				{
-					"type": "TStatic",
+					"type": "SFStatic",
 					"properties": {
-						"text": "nickname",
-						"enable-bbcode": true,
-						"font": "VT323-Regular",
-						"size": 25,
+						"text": "NICKNAME",
+						"enable-bbcode": false,
+						"character-width": 16,
+						"character-height": 16,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#\"'&()[]|`\\/@°+=*$£€<>",
+						"spacing-data": "",
+						"scale": 1,
+						"character-spacing": 0,
 						"line-height": 0,
-						"bold": true,
-						"italic": false,
-						"color": [
-							0,
-							0,
-							0,
-							1
-						],
 						"horizontal-alignment": "center",
-						"vertical-alignment": "top",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"initially-visible": true,
-						"origin": "top-left"
+						"origin": "center"
+					},
+					"uid": 83,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 231.08467623260043,
+						"y": 75.9732222522137,
+						"width": 152.43186319861417,
+						"height": 25.313819845887338,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							0.10196078431372549,
+							0.10588235294117647,
+							0.12549019607843137,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SFStatic",
+					"properties": {
+						"text": "ROOM ID",
+						"enable-bbcode": false,
+						"character-width": 16,
+						"character-height": 16,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#\"'&()[]|`\\/@°+=*$£€<>",
+						"spacing-data": "",
+						"scale": 1,
+						"character-spacing": 0,
+						"line-height": 0,
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "center"
 					},
 					"uid": 14,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 152.4328256266648,
-						"y": 33.81094187555492,
-						"width": 157.06237154690132,
-						"height": 55.05598433622467,
-						"originX": 0,
-						"originY": 0,
+						"x": 234.18928284789604,
+						"y": 150.17332035778276,
+						"width": 152.43186319861417,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
-							1,
-							1,
-							1,
+							0.10196078431372549,
+							0.10588235294117647,
+							0.12549019607843137,
 							1
 						],
 						"angle": 0,

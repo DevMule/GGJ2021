@@ -1,0 +1,61 @@
+{
+	"name": "SBtn",
+	"plugin-id": "Sprite",
+	"sid": 119375587613908,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 187,
+						"height": 113,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6780233,
+						"collisionPoly": {
+							"points": [
+								0.0053475935828877,
+								0,
+								1,
+								0,
+								1,
+								1,
+								0.0053475935828877,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 54,
+						"height": 54,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2991570,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 446645566359050,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

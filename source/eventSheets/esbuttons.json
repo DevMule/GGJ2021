@@ -1,0 +1,210 @@
+{
+	"name": "ESButtons",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-host",
+					"objectClass": "Multiplayer",
+					"sid": 399898059106561
+				},
+				{
+					"id": "compare-animation-frame",
+					"objectClass": "SBtn",
+					"sid": 447409118832286,
+					"parameters": {
+						"comparison": 0,
+						"number": "0"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 450628305499348,
+					"parameters": {
+						"variable": "IS_GAME_LOOP"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "SBtn",
+					"sid": 712641059724862,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 455649366271817
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-host",
+					"objectClass": "Multiplayer",
+					"sid": 658751447922543
+				},
+				{
+					"id": "compare-animation-frame",
+					"objectClass": "SBtn",
+					"sid": 312662498983180,
+					"parameters": {
+						"comparison": 0,
+						"number": "0"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 979612840682594,
+					"parameters": {
+						"variable": "IS_GAME_LOOP"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "SBtn",
+					"sid": 192556218354883,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 476174194551203
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-host",
+					"objectClass": "Multiplayer",
+					"sid": 143489300496030,
+					"isInverted": true
+				},
+				{
+					"id": "compare-animation-frame",
+					"objectClass": "SBtn",
+					"sid": 987396907897479,
+					"parameters": {
+						"comparison": 0,
+						"number": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "SBtn",
+					"sid": 383155495568534,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 672378192160440
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 599241475279193,
+					"parameters": {
+						"object": "SBtn"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 401624824820364,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "SBtn",
+							"sid": 351135327387408,
+							"parameters": {
+								"comparison": 0,
+								"number": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "beginTimer",
+							"sid": 695513721671424
+						}
+					],
+					"sid": 721104007511058
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "SBtn",
+							"sid": 705772669923464,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 166278584831532,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-fullscreen",
+									"objectClass": "Browser",
+									"sid": 455294749138845
+								}
+							],
+							"actions": [
+								{
+									"id": "cancel-fullscreen",
+									"objectClass": "Browser",
+									"sid": 129121682660480
+								}
+							],
+							"sid": 528392681378276
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 118705342378070
+								}
+							],
+							"actions": [
+								{
+									"id": "request-fullscreen",
+									"objectClass": "Browser",
+									"sid": 103808231162294,
+									"parameters": {
+										"mode": "stretch-letterbox-scale",
+										"navigation-ui": "auto"
+									}
+								}
+							],
+							"sid": 983925551453837
+						}
+					]
+				}
+			]
+		}
+	],
+	"sid": 997574261202353
+}

@@ -5,7 +5,7 @@
 		"gameID": "ggj2021-devmule-lost-and-found"
 	},
 	"game": {
-		"roundTime": 300000,
+		"roundTime": 120,
 		"inventorySize": 3,
 		"itemTypes": 12 
 	}

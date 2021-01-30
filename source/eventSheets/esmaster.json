@@ -36,6 +36,10 @@
 			"includeSheet": "ESMultiplayer"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "ESButtons"
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "GLOBAL FUNCTIONS",
