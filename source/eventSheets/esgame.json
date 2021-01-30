@@ -158,14 +158,14 @@
 						{
 							"id": "sync-instance-variable",
 							"objectClass": "Multiplayer",
-							"sid": 582568942878575,
+							"sid": 675750813406771,
 							"parameters": {
 								"object": "SPlayer",
 								"instance-variable": {
 									"name": "need_1",
 									"objectClass": "SPlayer"
 								},
-								"precision": "very-low-uint8-1-byte",
+								"precision": "low-int16-2-bytes",
 								"interpolation": "none",
 								"client-value-tag": "\"need_1\""
 							}
@@ -173,14 +173,14 @@
 						{
 							"id": "sync-instance-variable",
 							"objectClass": "Multiplayer",
-							"sid": 751735295218722,
+							"sid": 842999265483720,
 							"parameters": {
 								"object": "SPlayer",
 								"instance-variable": {
 									"name": "need_2",
 									"objectClass": "SPlayer"
 								},
-								"precision": "very-low-uint8-1-byte",
+								"precision": "low-int16-2-bytes",
 								"interpolation": "none",
 								"client-value-tag": "\"need_2\""
 							}
@@ -188,14 +188,14 @@
 						{
 							"id": "sync-instance-variable",
 							"objectClass": "Multiplayer",
-							"sid": 353772019728705,
+							"sid": 529618629739918,
 							"parameters": {
 								"object": "SPlayer",
 								"instance-variable": {
 									"name": "need_3",
 									"objectClass": "SPlayer"
 								},
-								"precision": "very-low-uint8-1-byte",
+								"precision": "low-int16-2-bytes",
 								"interpolation": "none",
 								"client-value-tag": "\"need_3\""
 							}
@@ -203,14 +203,14 @@
 						{
 							"id": "sync-instance-variable",
 							"objectClass": "Multiplayer",
-							"sid": 866426089049608,
+							"sid": 677613034702938,
 							"parameters": {
 								"object": "SPlayer",
 								"instance-variable": {
 									"name": "pick_1",
 									"objectClass": "SPlayer"
 								},
-								"precision": "very-low-uint8-1-byte",
+								"precision": "low-int16-2-bytes",
 								"interpolation": "none",
 								"client-value-tag": "\"pick_1\""
 							}
@@ -218,14 +218,14 @@
 						{
 							"id": "sync-instance-variable",
 							"objectClass": "Multiplayer",
-							"sid": 637454097366386,
+							"sid": 591270345541588,
 							"parameters": {
 								"object": "SPlayer",
 								"instance-variable": {
 									"name": "pick_2",
 									"objectClass": "SPlayer"
 								},
-								"precision": "very-low-uint8-1-byte",
+								"precision": "low-int16-2-bytes",
 								"interpolation": "none",
 								"client-value-tag": "\"pick_2\""
 							}
@@ -233,14 +233,14 @@
 						{
 							"id": "sync-instance-variable",
 							"objectClass": "Multiplayer",
-							"sid": 455726384215094,
+							"sid": 409952923274132,
 							"parameters": {
 								"object": "SPlayer",
 								"instance-variable": {
 									"name": "pick_3",
 									"objectClass": "SPlayer"
 								},
-								"precision": "very-low-uint8-1-byte",
+								"precision": "low-int16-2-bytes",
 								"interpolation": "none",
 								"client-value-tag": "\"pick_3\""
 							}
@@ -1746,6 +1746,60 @@
 									"parameters": {
 										"object": "SPlayer",
 										"peer-id": "pid"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "SPlayer",
+									"sid": 828346557726690,
+									"parameters": {
+										"instance-variable": "pick_1",
+										"value": "-1"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "SPlayer",
+									"sid": 333459662475997,
+									"parameters": {
+										"instance-variable": "pick_2",
+										"value": "-1"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "SPlayer",
+									"sid": 316708516527054,
+									"parameters": {
+										"instance-variable": "pick_3",
+										"value": "-1"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "SPlayer",
+									"sid": 893170217421800,
+									"parameters": {
+										"instance-variable": "need_1",
+										"value": "-1"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "SPlayer",
+									"sid": 860954624217443,
+									"parameters": {
+										"instance-variable": "need_2",
+										"value": "-1"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "SPlayer",
+									"sid": 131084366780782,
+									"parameters": {
+										"instance-variable": "need_3",
+										"value": "-1"
 									}
 								}
 							],
