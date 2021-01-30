@@ -1,32 +1,26 @@
 {
-	"name": "SDrop",
+	"name": "SDropIndicator",
 	"plugin-id": "Sprite",
-	"sid": 382175733286746,
+	"sid": 645748202629707,
 	"isGlobal": false,
 	"instanceVariables": [
 		{
-			"name": "drop_uid",
+			"name": "drop_index",
 			"type": "number",
 			"desc": "",
-			"sid": 796971647765676
-		},
-		{
-			"name": "drop_type",
-			"type": "number",
-			"desc": "",
-			"sid": 452896447245194
+			"sid": 207486135731556
 		}
 	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "EightDir",
 			"name": "8Direction",
-			"sid": 121874764637419
+			"sid": 374591481735587
 		},
 		{
 			"behaviorId": "scrollto",
 			"name": "ScrollTo",
-			"sid": 508421183541406
+			"sid": 314104288204379
 		}
 	],
 	"effectTypes": [],
@@ -42,12 +36,12 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 8502523,
+						"imageSpriteId": 8307235,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 421764350873481,
+				"sid": 175283752888871,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

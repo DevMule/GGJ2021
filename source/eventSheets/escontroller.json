@@ -12,6 +12,27 @@
 			"sid": 426671789974246
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 842463962797005
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layout-scale",
+					"objectClass": "System",
+					"sid": 342305944981718,
+					"parameters": {
+						"scale": "2.5"
+					}
+				}
+			],
+			"sid": 449371597102171
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "controller keyboard",
@@ -285,6 +306,29 @@
 				}
 			],
 			"sid": 752212200850156
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 738918750250212,
+					"parameters": {
+						"object": "SDropIndicator"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "dropItem",
+					"sid": 251365401246939,
+					"parameters": [
+						"SDropIndicator.drop_index"
+					]
+				}
+			],
+			"sid": 608327762274324
 		}
 	],
 	"sid": 880939369443232
