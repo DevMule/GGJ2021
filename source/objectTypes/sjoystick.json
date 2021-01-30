@@ -1,0 +1,57 @@
+{
+	"name": "SJoystick",
+	"plugin-id": "Sprite",
+	"sid": 895199575070039,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 135,
+						"height": 135,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-buttons.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6368334,
+						"collisionPoly": {
+							"points": [
+								0.14814814814814814,
+								0.14814814814814814,
+								0.5,
+								0.007407407407407408,
+								0.8444444444444444,
+								0.14814814814814814,
+								0.9851851851851852,
+								0.5,
+								0.8444444444444444,
+								0.8444444444444444,
+								0.5,
+								0.9851851851851852,
+								0.14814814814814814,
+								0.8444444444444444,
+								0.007407407407407408,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 848321244400224,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

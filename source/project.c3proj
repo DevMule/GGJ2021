@@ -156,7 +156,8 @@
 			"SBtn",
 			"TStatic",
 			"TLeaderboard",
-			"SFScore"
+			"SFScore",
+			"SJoystickHead"
 		],
 		"subfolders": [
 			{
@@ -186,7 +187,15 @@
 					"SFgameStatus",
 					"SFoundIndicator"
 				],
-				"subfolders": [],
+				"subfolders": [
+					{
+						"items": [
+							"SJoystick"
+						],
+						"subfolders": [],
+						"name": "joystick"
+					}
+				],
 				"name": "game"
 			}
 		]

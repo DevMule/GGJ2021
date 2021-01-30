@@ -133,6 +133,70 @@
 						"imageSpriteId": 7747263,
 						"useCollisionPoly": true,
 						"duration": 1
+					},
+					{
+						"width": 135,
+						"height": 135,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-buttons.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7043245,
+						"collisionPoly": {
+							"points": [
+								0.14814814814814814,
+								0.14814814814814814,
+								0.5,
+								0.007407407407407408,
+								0.8444444444444444,
+								0.14814814814814814,
+								0.9851851851851852,
+								0.5,
+								0.8444444444444444,
+								0.8444444444444444,
+								0.5,
+								0.9851851851851852,
+								0.14814814814814814,
+								0.8444444444444444,
+								0.007407407407407408,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 48,
+						"height": 48,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\79227\\Desktop\\GGJ-2021-buttons.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8262690,
+						"collisionPoly": {
+							"points": [
+								0.020833333333333332,
+								0,
+								0.020833333333333332,
+								0,
+								0.5624999999999999,
+								0,
+								0.7291666666666666,
+								0,
+								0.8333333333333334,
+								0.8333333333333334,
+								0.020833333333333332,
+								0.8541666666666666,
+								0.020833333333333332,
+								0.5833333333333334,
+								0.020833333333333332,
+								0
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
 					}
 				],
 				"sid": 446645566359050,

@@ -393,6 +393,37 @@
 			"sid": 190266923991597
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 950712214970923,
+					"parameters": {
+						"key": 70
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 397913905194778,
+					"parameters": {
+						"variable": "STEAL_PID",
+						"comparison": 0,
+						"value": "\"\""
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "stealItem",
+					"sid": 690112292541128
+				}
+			],
+			"sid": 979621587353914
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "STEALING",
@@ -600,6 +631,289 @@
 				}
 			],
 			"sid": 197173860300631
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "joystick",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 763790365313359,
+							"parameters": {
+								"object": "SJoystick"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "SJoystickHead",
+							"sid": 613468353465821,
+							"parameters": {
+								"x": "Touch.X(\"interface\")",
+								"y": "Touch.Y(\"interface\")"
+							}
+						}
+					],
+					"sid": 804492636649446,
+					"children": [
+						{
+							"eventType": "variable",
+							"name": "points_angle",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 376011009701734
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 577141142566306,
+									"parameters": {
+										"variable": "points_angle",
+										"value": "angle(SJoystickHead.X, SJoystickHead.Y, SJoystick.X, SJoystick.Y)"
+									}
+								}
+							],
+							"sid": 912361942209513,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 241252301367498,
+											"parameters": {
+												"first-value": "sin(points_angle)",
+												"comparison": 4,
+												"second-value": "0.3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 244200703992127,
+											"parameters": {
+												"variable": "LOCAL_INPUTS",
+												"value": "setbit(LOCAL_INPUTS, 2, 1)"
+											}
+										}
+									],
+									"sid": 834184525667263
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 206449649990006
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 204937352274800,
+											"parameters": {
+												"variable": "LOCAL_INPUTS",
+												"value": "setbit(LOCAL_INPUTS, 2, 0)"
+											}
+										}
+									],
+									"sid": 132364841632271
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 696790297762093,
+											"parameters": {
+												"first-value": "sin(points_angle)",
+												"comparison": 2,
+												"second-value": "-0.3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 296041672717641,
+											"parameters": {
+												"variable": "LOCAL_INPUTS",
+												"value": "setbit(LOCAL_INPUTS, 3, 1)"
+											}
+										}
+									],
+									"sid": 621619437986631
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 509323443791900
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 618925357834210,
+											"parameters": {
+												"variable": "LOCAL_INPUTS",
+												"value": "setbit(LOCAL_INPUTS, 3, 0)"
+											}
+										}
+									],
+									"sid": 330299696296149
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 108296704853047,
+											"parameters": {
+												"first-value": "cos(points_angle)",
+												"comparison": 2,
+												"second-value": "-0.3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 598314799064936,
+											"parameters": {
+												"variable": "LOCAL_INPUTS",
+												"value": "setbit(LOCAL_INPUTS, 1, 1)"
+											}
+										}
+									],
+									"sid": 556165862334303
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 354783087131252
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 695083077117787,
+											"parameters": {
+												"variable": "LOCAL_INPUTS",
+												"value": "setbit(LOCAL_INPUTS, 1, 0)"
+											}
+										}
+									],
+									"sid": 249590951125947
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 896917359728408,
+											"parameters": {
+												"first-value": "cos(points_angle)",
+												"comparison": 4,
+												"second-value": "0.3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 885472134447873,
+											"parameters": {
+												"variable": "LOCAL_INPUTS",
+												"value": "setbit(LOCAL_INPUTS, 0, 1)"
+											}
+										}
+									],
+									"sid": 103201936312740
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 978160885400448
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 502963558096697,
+											"parameters": {
+												"variable": "LOCAL_INPUTS",
+												"value": "setbit(LOCAL_INPUTS, 0, 0)"
+											}
+										}
+									],
+									"sid": 486485629513050
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 106454248529417
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "SJoystickHead",
+							"sid": 731682607134254,
+							"parameters": {
+								"x": "SJoystick.X",
+								"y": "SJoystick.Y"
+							}
+						}
+					],
+					"sid": 629109149221731
+				}
+			],
+			"sid": 847849078369485
 		}
 	],
 	"sid": 880939369443232
