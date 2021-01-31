@@ -8,6 +8,6 @@
 		"roundTime": 120,
 		"inventorySize": 3,
 		"itemTypes": 12,
-		"dropRespawnTime": 1
+		"dropRespawnTime": 0.3
 	}
 }
