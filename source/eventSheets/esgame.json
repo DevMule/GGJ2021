@@ -824,6 +824,16 @@
 										"comparison": 0,
 										"second-value": "SPlayer.pick_1"
 									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 460358249033984,
+									"parameters": {
+										"first-value": "SPlayer.need_1",
+										"comparison": 1,
+										"second-value": "-1"
+									}
 								}
 							],
 							"actions": [
@@ -851,6 +861,16 @@
 										"comparison": 0,
 										"second-value": "SPlayer.pick_2"
 									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 706683023348888,
+									"parameters": {
+										"first-value": "SPlayer.need_2",
+										"comparison": 1,
+										"second-value": "-1"
+									}
 								}
 							],
 							"actions": [
@@ -877,6 +897,16 @@
 										"first-value": "SPlayer.need_3",
 										"comparison": 0,
 										"second-value": "SPlayer.pick_3"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 193336752555456,
+									"parameters": {
+										"first-value": "SPlayer.need_3",
+										"comparison": 1,
+										"second-value": "-1"
 									}
 								}
 							],
