@@ -84,64 +84,166 @@
 				{
 					"id": "compare-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 502913370749761,
+					"sid": 123848852891758,
 					"parameters": {
-						"variable": "IS_GAME_LOOP"
+						"variable": "IS_MOBILE"
 					}
 				}
 			],
-			"actions": [],
-			"sid": 818906850585681,
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "SJoystick",
+					"sid": 873453130298835,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "SJoystickHead",
+					"sid": 636141765532596,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 865325344299536,
 			"children": [
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-animation-frame",
-							"objectClass": "SBtn",
-							"sid": 397282318706965,
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 965907524578075,
 							"parameters": {
-								"comparison": 0,
-								"number": "2"
+								"variable": "IS_GAME_LOOP"
 							}
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 227714424308977,
+					"children": [
 						{
-							"id": "set-visible",
-							"objectClass": "SBtn",
-							"sid": 800999423796688,
-							"parameters": {
-								"visibility": "visible"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "SBtn",
+									"sid": 511968122275909,
+									"parameters": {
+										"comparison": 0,
+										"number": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "SBtn",
+									"sid": 624683916038332,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 753820358988872
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "SBtn",
+									"sid": 936293684275877,
+									"parameters": {
+										"comparison": 0,
+										"number": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "SBtn",
+									"sid": 105454087080459,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 986193229056169
 						}
-					],
-					"sid": 788977010386317
+					]
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-animation-frame",
-							"objectClass": "SBtn",
-							"sid": 617375794278418,
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 114943464108272,
 							"parameters": {
-								"comparison": 0,
-								"number": "3"
-							}
+								"variable": "IS_GAME_LOOP"
+							},
+							"isInverted": true
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 741915330342695,
+					"children": [
 						{
-							"id": "set-visible",
-							"objectClass": "SBtn",
-							"sid": 489181983368771,
-							"parameters": {
-								"visibility": "visible"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "SBtn",
+									"sid": 188356151185161,
+									"parameters": {
+										"comparison": 0,
+										"number": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "SBtn",
+									"sid": 450108174883112,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 749768666632925
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "SBtn",
+									"sid": 712621445808852,
+									"parameters": {
+										"comparison": 0,
+										"number": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "SBtn",
+									"sid": 207076173757612,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 235513859241251
 						}
-					],
-					"sid": 614898908222613
+					]
 				}
 			]
 		},
@@ -151,15 +253,32 @@
 				{
 					"id": "compare-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 143734694820952,
+					"sid": 257447945162164,
 					"parameters": {
-						"variable": "IS_GAME_LOOP"
+						"variable": "IS_MOBILE"
 					},
 					"isInverted": true
 				}
 			],
-			"actions": [],
-			"sid": 341208015425170,
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "SJoystick",
+					"sid": 164304036911513,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "SJoystickHead",
+					"sid": 408993185673883,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 484804184206345,
 			"children": [
 				{
 					"eventType": "block",
@@ -167,7 +286,7 @@
 						{
 							"id": "compare-animation-frame",
 							"objectClass": "SBtn",
-							"sid": 344374494457500,
+							"sid": 857378506715395,
 							"parameters": {
 								"comparison": 0,
 								"number": "2"
@@ -178,13 +297,13 @@
 						{
 							"id": "set-visible",
 							"objectClass": "SBtn",
-							"sid": 724007862173941,
+							"sid": 543749690030219,
 							"parameters": {
 								"visibility": "invisible"
 							}
 						}
 					],
-					"sid": 820044290070024
+					"sid": 500725158099751
 				},
 				{
 					"eventType": "block",
@@ -192,7 +311,7 @@
 						{
 							"id": "compare-animation-frame",
 							"objectClass": "SBtn",
-							"sid": 882054309837851,
+							"sid": 225719415722221,
 							"parameters": {
 								"comparison": 0,
 								"number": "3"
@@ -203,13 +322,13 @@
 						{
 							"id": "set-visible",
 							"objectClass": "SBtn",
-							"sid": 263912403129137,
+							"sid": 280485623257524,
 							"parameters": {
 								"visibility": "invisible"
 							}
 						}
 					],
-					"sid": 948443595135681
+					"sid": 342259587829934
 				}
 			]
 		},
@@ -575,8 +694,212 @@
 						}
 					],
 					"sid": 886798823278220
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "SBtn",
+							"sid": 687180495781831,
+							"parameters": {
+								"comparison": 0,
+								"number": "7"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "SBtn",
+							"sid": 580256121561755,
+							"parameters": {
+								"comparison": 0,
+								"number": "8"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "toggle-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 606612304023732,
+							"parameters": {
+								"variable": "IS_SOUND"
+							}
+						}
+					],
+					"sid": 388851982191547,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "SBtn",
+							"sid": 830850846796419,
+							"parameters": {
+								"comparison": 0,
+								"number": "9"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "SBtn",
+							"sid": 893588211394770,
+							"parameters": {
+								"comparison": 0,
+								"number": "10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "toggle-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 537326473955759,
+							"parameters": {
+								"variable": "IS_MOBILE"
+							}
+						}
+					],
+					"sid": 442793231906723,
+					"isOrBlock": true
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-animation-frame",
+					"objectClass": "SBtn",
+					"sid": 606990335035236,
+					"parameters": {
+						"comparison": 0,
+						"number": "7"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 217985841798906,
+					"parameters": {
+						"variable": "IS_SOUND"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "SBtn",
+					"sid": 449733430032227,
+					"parameters": {
+						"frame-number": "8"
+					}
+				}
+			],
+			"sid": 233052476916359
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-animation-frame",
+					"objectClass": "SBtn",
+					"sid": 786874797082082,
+					"parameters": {
+						"comparison": 0,
+						"number": "8"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 866667484728507,
+					"parameters": {
+						"variable": "IS_SOUND"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "SBtn",
+					"sid": 840125037913234,
+					"parameters": {
+						"frame-number": "7"
+					}
+				}
+			],
+			"sid": 761167933552862
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-animation-frame",
+					"objectClass": "SBtn",
+					"sid": 544235393068705,
+					"parameters": {
+						"comparison": 0,
+						"number": "9"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 271576905739216,
+					"parameters": {
+						"variable": "IS_MOBILE"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "SBtn",
+					"sid": 628158577651680,
+					"parameters": {
+						"frame-number": "10"
+					}
+				}
+			],
+			"sid": 890134972189889
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-animation-frame",
+					"objectClass": "SBtn",
+					"sid": 415932197977468,
+					"parameters": {
+						"comparison": 0,
+						"number": "10"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 755573064526284,
+					"parameters": {
+						"variable": "IS_MOBILE"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "SBtn",
+					"sid": 309844545695962,
+					"parameters": {
+						"frame-number": "9"
+					}
+				}
+			],
+			"sid": 816550683776930
 		}
 	],
 	"sid": 997574261202353

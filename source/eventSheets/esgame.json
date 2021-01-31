@@ -1252,6 +1252,42 @@
 							"sid": 181495003086818
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-peer-message",
+							"objectClass": "Multiplayer",
+							"sid": 702886907063905,
+							"parameters": {
+								"tag": "\"playSound\""
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 351262255840107,
+							"parameters": {
+								"variable": "IS_SOUND"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play-by-name",
+							"objectClass": "Audio",
+							"sid": 791297923208865,
+							"parameters": {
+								"folder": "sounds",
+								"audio-file-name": "Multiplayer.Message",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 913511930078227
 				}
 			],
 			"sid": 346060190745918
@@ -1263,6 +1299,114 @@
 			"description": "",
 			"isActiveOnStart": false,
 			"children": [
+				{
+					"eventType": "comment",
+					"text": "sounds sync"
+				},
+				{
+					"functionName": "sendPlaySound",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "sound",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 523845857123341
+						},
+						{
+							"name": "pid",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 901325466722395
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 846967701475192,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 604399266706012,
+									"parameters": {
+										"first-value": "Multiplayer.MyID",
+										"comparison": 0,
+										"second-value": "pid"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 315158043116107,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 735091555428892,
+											"parameters": {
+												"variable": "IS_SOUND"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play-by-name",
+											"objectClass": "Audio",
+											"sid": 159440827123556,
+											"parameters": {
+												"folder": "sounds",
+												"audio-file-name": "sound",
+												"loop": "not-looping",
+												"volume": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 751506466644557
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 143410393413521
+								}
+							],
+							"actions": [
+								{
+									"id": "send-message",
+									"objectClass": "Multiplayer",
+									"sid": 785161687381612,
+									"parameters": {
+										"peer-id": "pid",
+										"tag": "\"playSound\"",
+										"message": "sound",
+										"mode": "reliable-ordered"
+									}
+								}
+							],
+							"sid": 765289154406379
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "creating items"
+				},
 				{
 					"functionName": "createDrop",
 					"functionDescription": "",
@@ -1610,6 +1754,14 @@
 										"instance-variable": "drop_type",
 										"value": "drop_type"
 									}
+								},
+								{
+									"callFunction": "sendPlaySound",
+									"sid": 527115002982163,
+									"parameters": [
+										"\"drop\"",
+										"pid"
+									]
 								}
 							],
 							"sid": 973614343894708
@@ -2028,6 +2180,14 @@
 											"id": "destroy",
 											"objectClass": "SDrop",
 											"sid": 656811206678767
+										},
+										{
+											"callFunction": "sendPlaySound",
+											"sid": 135040783911910,
+											"parameters": [
+												"\"pick_up\"",
+												"pid"
+											]
 										}
 									],
 									"sid": 442421476056936
@@ -2424,7 +2584,24 @@
 									}
 								}
 							],
-							"actions": [],
+							"actions": [
+								{
+									"callFunction": "sendPlaySound",
+									"sid": 683054926588775,
+									"parameters": [
+										"\"steal\"",
+										"stealer_pid"
+									]
+								},
+								{
+									"callFunction": "sendPlaySound",
+									"sid": 953927079083226,
+									"parameters": [
+										"\"steal\"",
+										"victim_pid"
+									]
+								}
+							],
 							"sid": 444085023116806,
 							"children": [
 								{

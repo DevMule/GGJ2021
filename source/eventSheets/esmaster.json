@@ -32,6 +32,26 @@
 			"sid": 128554506734898
 		},
 		{
+			"eventType": "variable",
+			"name": "IS_MOBILE",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 393022635573371
+		},
+		{
+			"eventType": "variable",
+			"name": "IS_SOUND",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 325892144539709
+		},
+		{
 			"eventType": "include",
 			"includeSheet": "ESMultiplayer"
 		},

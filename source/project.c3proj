@@ -103,6 +103,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"version": "r225",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "EightDir",
 			"name": "8 Direction",
@@ -157,7 +165,8 @@
 			"TStatic",
 			"TLeaderboard",
 			"SFScore",
-			"SJoystickHead"
+			"SJoystickHead",
+			"Audio"
 		],
 		"subfolders": [
 			{
@@ -244,7 +253,33 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "drop.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 611049545774467
+				},
+				{
+					"name": "begin.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 235713392748977
+				},
+				{
+					"name": "end.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 196701453596394
+				},
+				{
+					"name": "pick_up.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 587079667713586
+				},
+				{
+					"name": "steal.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 719824157928593
+				}
+			],
 			"subfolders": []
 		},
 		"music": {
