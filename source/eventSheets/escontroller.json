@@ -592,6 +592,15 @@
 														"variable": "STEAL_PID",
 														"value": "SPlayer.pid"
 													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 136728074232035,
+													"parameters": {
+														"variable": "nearest_distance",
+														"value": "distance_to_current"
+													}
 												}
 											],
 											"sid": 254041955462261
@@ -604,9 +613,9 @@
 										{
 											"id": "compare-two-values",
 											"objectClass": "System",
-											"sid": 734536906962691,
+											"sid": 775593792346126,
 											"parameters": {
-												"first-value": "distance_to_current",
+												"first-value": "nearest_distance",
 												"comparison": 5,
 												"second-value": "25"
 											}
@@ -626,6 +635,22 @@
 									"sid": 730267693121752
 								}
 							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "log",
+									"objectClass": "Browser",
+									"sid": 551613838315868,
+									"parameters": {
+										"type": "log",
+										"message": "str(nearest_distance)"
+									}
+								}
+							],
+							"sid": 448112761971970
 						}
 					]
 				}
